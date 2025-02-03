@@ -24,7 +24,7 @@ export function Satisfaction() {
             100% satisfaction guaranteed on every order!
           </p>
           <p className="text-center text-sm  my-5 md:text-base lg:text-start">
-          Expertly crafted for bladder health, our premium doctor-formulated blend combines clinically supported ingredients to enhance bladder control, promote urinary comfort, and ensure quality and efficacy backed by scientific research.
+          Our formula is designed by health professionals with expertise in joint health and inammation management. We use only premium, high-quality ingredients that are backed by clinical studies and rigorous research.
           </p>
           <div className="flex flex-col items-center gap-4 md:gap-5 lg:items-start">
             <SalesBadge className="w-full max-w-[360px] text-center" />

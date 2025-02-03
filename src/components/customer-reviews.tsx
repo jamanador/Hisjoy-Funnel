@@ -48,12 +48,11 @@ const reviews = [
 export function CustomerReviews() {
   return (
     <section className="relative mx-auto max-w-6xl space-y-2 p-4 text-center lg:p-6">
-      <p className="mx-auto max-w-[60ch] text-balance text-center text-2xl font-black leading-snug text-black md:text-[39px] lg:text-4xl">
+      <p className="mx-auto max-w-[65ch] text-balance text-center text-2xl font-black leading-snug text-black md:text-[39px] lg:text-4xl">
         Trusted by Thousands of Customers
       </p>
-      <p className="mx-auto max-w-[60ch] text-sm font-semibold leading-relaxed md:text-base lg:text-lg">
-        Hear from Happy customers on how Arthroflex 365 Formula improved their
-        life
+      <p className="mx-auto text-sm font-semibold leading-relaxed md:text-base lg:text-md">
+        Hear from Happy customers on how Arthroflex 365 Formula improved their life
       </p>
       <ul className="divide-y divide-gray-200 text-start md:pt-5">
         {reviews.map(

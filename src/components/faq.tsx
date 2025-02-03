@@ -3,43 +3,49 @@ import { IoChevronDown } from "react-icons/io5";
 
 const faqs = [
   {
-    question:
-      "Why is ArthroFlex 365 superior to other joint support supplements?",
+    question: "Why is ArthroFlex 365 superior to other joint support supplements?",
     answer:
-      "ArthroFlex 365 is doctor-formulated and includes clinically supported ingredients like Glucosamine, MSM, Chondroitin, Curcumin, and Boswellia Serrata, proven to enhance joint mobility, reduce stiffness, and relieve discomfort. It also features Black Pepper Extract to ensure maximum absorption of these nutrients, making the formula faster and more effective.",
+      "ArthroFlex 365 is doctor-formulated and includes clinically supported ingredients like Glucosamine, MSM, Chondroitin, Curcumin, and Boswellia Serrata, proven to enhance joint mobility, reduce stiffness, and relieve discomfort. It also features Black Pepper Extract to ensure maximum absorption of these nutrients, making the formula faster and more effective. Please refer to the Why It Works section for detailed clinical results.",
   },
   {
     question: "How quickly can I expect results?",
     answer:
-      "For optimal results, we recommend taking 2 capsules at bedtime with a snack, or as directed by your healthcare provider. This helps support bladder function overnight and reduces the need for frequent bathroom trips.",
+      "Most users report noticeable relief within 7–14 days, with full benefits experienced after consistent use for 6–12 weeks.",
   },
   {
-    question:
-      "Is ArthroFlex 365 effective for severe joint issues?",
+    question: "Is ArthroFlex 365 effective for severe joint issues?",
     answer:
-      "Many users begin to notice improvements within 2-4 weeks of consistent use. However, for best results, we recommend taking the formula for at least 12 weeks to fully experience the benefits of improved bladder control and reduced urgency.",
+      "Yes! ArthroFlex 365 contains clinically supported ingredients like Glucosamine, MSM, and Chondroitin to address even advanced joint concerns, such as stiffness, discomfort, and reduced mobility.",
   },
   {
     question: "Are there any side effects?",
     answer:
-      "It’s always best to follow the recommended dosage for the best results. However, if you feel adjustments are necessary, we advise consulting with your healthcare provider before making any changes to your dosage.",
+      "ArthroFlex 365 is made with natural, clinically supported ingredients and is generally well-tolerated. However, if you have specific medical conditions or allergies, it’s best to consult your doctor before use.",
   },
   {
     question: "When is the best time to take ArthroFlex 365?",
     answer:
+      "For best results, we recommend taking 2 capsules daily with a meal, as the nutrients work better when absorbed with food.",
+  },
+  {
+    question: "Can I take more or less than the recommended dose?",
+    answer:
+      "It’s always best to follow the recommended dosage for optimal results. However, if you feel adjustments are necessary, we advise consulting with your healthcare provider before making any changes to your dosage.",
+  },
+  {
+    question: "What if ArthroFlex 365 doesn’t work for me?",
+    answer:
       "We’re confident in the effectiveness of our formula, but if you’re not satisfied, we offer a 90-day, no-questions-asked return policy. Simply contact us for a full refund.",
   },
   {
-    question:
-      "Can I take more or less than the recommended dose?",
+    question: "Can I take ArthroFlex 365 if I’m already on joint pain medication?",
     answer:
-      "If you’re currently taking medications or have any medical conditions, we recommend speaking with your healthcare provider before adding any supplements to your routine to ensure there are no potential interactions.",
+      "If you are currently taking medications or have underlying conditions, consult with your healthcare provider before adding ArthroFlex 365 to your routine.",
   },
   {
-    question:
-      "What if ArthroFlex 365 doesn’t work for me?",
+    question: "How does Black Pepper Extract enhance the effectiveness of the other ingredients?",
     answer:
-      "Piperine is a key ingredient that improves the bioavailability of the other components in the formula, helping your body absorb them more effectively. This means faster and more powerful results for bladder health and urinary function.",
+      "Black Pepper Extract is a key ingredient that improves the bioavailability of other components in the formula, helping your body absorb them more effectively. This means faster and more powerful results for joint support and mobility.",
   },
 ] as const;
 

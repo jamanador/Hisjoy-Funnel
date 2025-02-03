@@ -40,19 +40,19 @@ export const config = {
   whyUrinaryFormula: [
     {
       icon: "/icons/Vector.svg",
-      title: "Reduces Urgency and Frequency",
+      title: "Relieves Joint Discomfort and Stiffness",
       description: "",
     },
     {
       icon: "/icons/Group2.svg",
-      title: "Supports Bladder Strength",
+      title: "Supports Natural Pain Relief",
       description: "support_blader",
     },
     {
       icon: "/icons/Group.svg",
-      title: "Promotes Urinary Tract Health",
+      title: "Promotes Flexibility and Active Living",
       description:
-        "Features natural components like Punarnava (Boerhaavia Diffusa) and Soy Germ Extract, which support urinary tract health by reducing inammation and providing hormonal balance, particularly beneficial for women.",
+        "Designed to support long-term joint health, ArthroFlex 365 reduces stiffness and discomfort, empowering you to stay active and condent in both social and physical settings.",
     },
   ],
 } as const;
