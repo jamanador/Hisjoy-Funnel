@@ -1,0 +1,12 @@
+<svg
+        fill="none"
+        height="48"
+        width="45"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="m0 0h22l23 48h-45z" fill="#b11e54"></path>
+        <path
+          d="m45 48-23-48-13.924 27.849c-2.594 5.187.323 11.437 5.965 12.78z"
+          fill="#ffd972"
+        ></path>
+      </svg>
