@@ -1,10 +1,10 @@
 export const config = {
   bannerOfferings: [
-    "Instant Relief – Feel Joint Comfort Starting in Just Weeks!",  
-"Clinically Proven to Reduce Stiffness by up to 68%!" , 
-"Boosts Joint Lubrication for Smoother, Pain-Free Movement!" , 
-"Strengthens Cartilage & Reduces Inflammation for Long-Term Joint Health!"  ,
-"Targets Bone-on-Bone Discomfort – A Breakthrough in Joint Repair!"
+    "Instant Relief – Feel Joint Comfort Starting in Just Weeks!",
+    "Clinically Proven to Reduce Stiffness by up to 68%!",
+    "Boosts Joint Lubrication for Smoother, Pain-Free Movement!",
+    "Strengthens Cartilage & Reduces Inflammation for Long-Term Joint Health!",
+    "Targets Bone-on-Bone Discomfort – A Breakthrough in Joint Repair!"
   ],
   packages: [
     {
@@ -24,18 +24,18 @@ export const config = {
     },
   ],
   problems: [
-    "Running to the bathroom",
-    "Waking up at night to pee",
-    "Dribbling and leaking unexpectedly",
-    "Feeling like you’re never truly “empty” or “relieved”",
-    "Padded underwear and diapers",
+    "Joint discomfort and stiffness limit your daily activities and quality of life.",
+    "Wear and tear on cartilage leads to pain and long-term joint damage.",
+    "Inflammation makes it harder to stay active and mobile.",
+    "Synthetic medications often come with unwanted side effects.",
+    "Aging reduces natural joint lubrication, increasing stiffness and discomfort."
   ],
   solutions: [
-    "Feel totally empty after using the bathroom",
-    "No more burning or instant urge to urinate,",
-    "Well rested, energetic after sleeping through the night",
-    "Wear regular underwear with confidence",
-    "Complete Control of your Bladder",
+    "Relief of joint pain and stiffness.",
+    "Protect and regenerate cartilage for long-term joint health.",
+    "Reduce inflammation naturally.",
+    "Boost joint lubrication for smooth, pain-free movement.",
+    "Live pain-free.",
   ],
   whyUrinaryFormula: [
     {
