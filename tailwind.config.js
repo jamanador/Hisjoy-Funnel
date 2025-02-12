@@ -10,9 +10,9 @@ export default {
         "neutral-dark": "#333333",
         "neutral-light": "#FFFFFF",
         "brand-green": "#244442",
-        "brand-lime": "#1F8E2A",
-        "brand-beige": "#E5D8C8",
-        "brand-maroon": "#B11E54",
+        "brand-third": "#316d89",
+        "brand-secondary": "#22C55E",
+        "brand-maroon": "#6fb1c8",
       },
       backgroundImage: {
         "banner-gradient":

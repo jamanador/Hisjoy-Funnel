@@ -9,6 +9,7 @@ import {
   FaPhoneAlt,
   FaTruck,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -80,9 +81,8 @@ export function Header() {
     <>
       {/* Top green navbar - shows when scrolling up */}
       <header
-        className={`fixed left-0 right-0 top-0 z-50 transition-transform duration-300 ${
-          isScrollingDown ? "-translate-y-full" : "translate-y-0"
-        }`}
+        className={`fixed left-0 right-0 top-0 z-50 md:mb-9 transition-transform duration-300 ${isScrollingDown ? "-translate-y-full" : "translate-y-0"
+          }`}
       >
         <div className="w-full">
           <div className="min-h-[1.875rem] overflow-hidden bg-[#EFEFE9] text-center text-black py-2">
@@ -121,10 +121,9 @@ export function Header() {
             </div>
           </div>
           <div className="color-green">
-            <div className="relative mx-auto flex min-h-[52px] sm:min-h-[60px] md:min-h-[70px] max-w-7xl items-center justify-end px-4 py-8 text-white lg:py-1">
-              <a
-                className="absolute right-1/2 translate-x-1/2 p-1 text-2xl focus:ring"
-                href="#"
+            <div className="relative mx-auto flex min-h-[52px] sm:min-h-[60px] md:min-h-[70px] max-w-7xl items-center justify-end px-4 md:y-8 text-white lg:py-1">
+              <Link to="/home"
+                className="absolute right-1/2 translate-x-1/2 p-1 text-2xl"
               >
                 <h1 className="sr-only">Eco Health Funnel</h1>
                 <img
@@ -132,13 +131,13 @@ export function Header() {
                   src="/images/logo.svg"
                   alt="logo"
                 />
-              </a>
+              </Link>
               <button className="transition-transform hover:scale-110">
                 <BsCart3 className="size-6" strokeWidth="0.5" />
               </button>
             </div>
-            <div className="text-center w-full bg-[#21bd00] py-4">
-              <h3 className="font-bold text-2xl text-white">Today Only: Sign Up and Save $10—With Speedy, Free Shipping</h3>
+            <div className="text-center w-full bg-[#21bd00] py-2 md:py-4">
+              <h3 className="font-semibold md:font-bold text-[13px] md:text-lg lg:text-2xl text-white">Today Only: Sign Up and Save $10—With Speedy, Free Shipping</h3>
             </div>
           </div>
         </div>
@@ -147,7 +146,9 @@ export function Header() {
       {/* Secondary navbar - shows when scrolling down */}
 
       {/* Spacer to prevent content from jumping */}
-      <div className="h-[calc(1.4rem+3rem)] md:h-[calc(1.4rem+5rem)]"></div>
+      {/* Add a spacer div to push content down */}
+      <div className="h-[140px] md:h-[180px] lg:h-[200px]"></div>
+
     </>
   );
 }

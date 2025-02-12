@@ -1,11 +1,11 @@
-import { CustomerReviews } from "./components/customer-reviews";
-import { Header } from "./components/header";
+import Routes from "./Routes/Routes";
 
 export function App() {
   return (
-    <div className="font-montserrat max-w-2xl mx-auto">
-      <Header />
-      <CustomerReviews />
+    <div className="font-montserrat px-1">
+      <div className="flex-grow">
+      <Routes />
+      </div>
     </div>
   );
 }

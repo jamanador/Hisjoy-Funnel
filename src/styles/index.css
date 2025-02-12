@@ -12,57 +12,111 @@
     --padding-inline: 1rem;
     --container-max-width: 85rem;
     --breakout-max-width: 88rem;
-    --breakout-size: calc(
-      (var(--breakout-max-width) - var(--container-max-width)) / 2
-    );
+    --breakout-size: calc((var(--breakout-max-width) - var(--container-max-width)) / 2);
 
     display: grid;
     grid-template-columns:
-      [full-width-start] minmax(var(--padding-inline), 1fr)
-      [breakout-start] minmax(0, var(--breakout-size)) [content-start] min(
-        100% - (var(--padding-inline) * 2),
-        var(--container-max-width)
-      )
-      [content-end] minmax(0, var(--breakout-size)) [breakout-end] minmax(
-        var(--padding-inline),
-        1fr
-      )
-      [full-width-end];
+      [full-width-start] minmax(var(--padding-inline), 1fr) [breakout-start] minmax(0, var(--breakout-size)) [content-start] min(100% - (var(--padding-inline) * 2),
+        var(--container-max-width)) [content-end] minmax(0, var(--breakout-size)) [breakout-end] minmax(var(--padding-inline),
+        1fr) [full-width-end];
   }
 
-  .grid-containerxl > :not(.full-width, .breakout) {
+  .grid-containerxl> :not(.full-width, .breakout) {
     grid-column: content;
   }
 
-  .grid-containerxl > .full-width {
+  .grid-containerxl>.full-width {
     grid-column: full-width;
   }
 
-  .grid-containerxl > .breakout {
+  .grid-containerxl>.breakout {
     grid-column: breakout;
   }
+
   .text-maroon {
     @apply text-[#B11E54];
   }
+
   .title {
-    @apply text-balance pb-4 text-center text-3xl font-bold  md:text-[39px] lg:text-4xl text-black;
+    @apply text-balance pb-4 text-center text-3xl font-bold md:text-[39px] lg:text-4xl text-black;
   }
+
   .title-no {
-    @apply text-balance pb-4 text-center text-3xl font-bold  md:text-[39px] lg:text-4xl ;
+    @apply text-balance pb-4 text-center text-3xl font-bold md:text-[39px] lg:text-4xl;
   }
+
   .p-fit {
     @apply px-4 md:px-2 lg:px-0;
   }
+
   .test {
     @apply md:ring-2 md:ring-red-500 lg:ring-4 lg:ring-green-500 xl:ring-4 xl:ring-blue-600 2xl:ring-yellow-600;
   }
+
   .secGap {
     @apply my-12 md:my-16 xl:my-20;
   }
+
   .secGap_one {
     @apply mt-14;
   }
+
   .color-green {
     @apply bg-[#6fb1c8];
   }
 }
+
+.footer_cls {
+  @apply w-full;
+  width: 100vw;
+  /* Ensures the footer takes the full viewport width */
+  position: relative;
+  /* Necessary for positioning adjustments */
+  left: 50%;
+  /* Center the footer */
+  transform: translateX(-50%);
+  /* Adjust the positioning */
+}
+.custom {
+  background: linear-gradient(0deg, #6fb1c8 0%, #4a88a6 100%);
+}
+.custom_btn{
+  .button {
+    background-color: #28a745; /* A darker green */
+    color: white;              /* Text color */
+    border: none;              /* Remove border */
+    padding: 10px 20px;        /* Padding for the button */
+    border-radius: 5px;        /* Rounded corners */
+    font-size: 16px;           /* Font size */
+    cursor: pointer;           /* Pointer cursor on hover */
+  }
+  
+  .button:hover {
+    background-color: #218838; /* Darker shade for hover effect */
+  }
+  
+}
+
+.notifybutton {
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.notifybutton.clicked {
+  animation: clickEffect 0.5s ease-in-out;
+}
+
+@keyframes clickEffect {
+  0% {
+    transform: scale(1);
+    background-color: #3b82f6;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #1d4ed8;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #3b82f6;
+  }
+}
+

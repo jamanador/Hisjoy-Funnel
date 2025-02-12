@@ -46,7 +46,7 @@ const reviews = [
 
 export function CustomerReviews() {
   return (
-    <section className="relative mx-auto max-w-6xl space-y-2 p-4 text-center lg:p-6 my-36">
+    <section className="relative mx-auto max-w-6xl space-y-2 p-4 text-center lg:p-6 my-12">
       <p className="mx-auto max-w-[65ch] text-balance text-center text-2xl font-black leading-snug text-black md:text-[39px] lg:text-4xl">
         Real People, Real Results
 
