@@ -7,7 +7,7 @@ export function SalesBadge({ className }: Readonly<SalesBadgeProps>) {
     <div
       className={twMerge(
         className,
-        "relative text-[15px] rounded-xl border border-dashed border-brand-maroon bg-white px-3 sm:px-4 py-1 font-semibold ",
+        "relative text-[12px] md:text-[15px] rounded-xl border border-dashed border-brand-maroon bg-white px-3 sm:px-4 py-1 font-semibold ",
       )}
     >
       Selling fast, HURRY!

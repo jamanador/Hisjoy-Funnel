@@ -1,14 +1,13 @@
-import { BiSolidDislike, BiSolidLike } from "react-icons/bi";
-import { IoIosCheckmark, IoIosCheckmarkCircle, IoMdStar } from "react-icons/io";
+import { IoIosCheckmarkCircle, IoMdStar } from "react-icons/io";
 
 const reviews = [
   {
     user_name: "Sarah k.",
     isVerified: true,
     ratings: 5,
-    title: "I haven't felt this great in years",
+    title: "Life-Changing Convenience!",
     review:
-      "I've been suffering from chronic joint pain for years and tried countless remedies with no relief. However, since taking Arthroflex 365 joint pain and arthritis formula, my pain has significantly decreased and I feel more mobile than ever before. I highly recommend this product to anyone struggling with joint pain",
+      "The pricing is fair, and the service is top-notch. Finally, a healthcare solution that actually works! Highly recommend!",
     img: "/images/testimonial-1.jpg",
     day: "12 Hours",
   },
@@ -16,9 +15,9 @@ const reviews = [
     user_name: "John M.",
     isVerified: true,
     ratings: 5,
-    title: "I was able to assume my normal activites.",
+    title: "Affordable & Reliable Healthcare",
     review:
-      "As an active senior, joint pain and stiffness were becoming hindrance to my daily activities. After trying this joing pain and arthritis formula, I was pleasantly surprised to find that my joints felt much more flexible and I was able to resume my normal activities with ease. Arthroflex 365 has been a game-changer for me.",
+      "The service was quick, easy, and reliable. No hassle, no long waits—just exactly what I needed. Highly recommended.",
     img: "/images/testimonial-2.jpg",
     day: "3 Days",
   },
@@ -26,9 +25,9 @@ const reviews = [
     user_name: "Emily C.",
     isVerified: true,
     ratings: 5,
-    title: "The only Joint Pain Supplement I will use",
+    title: "Fast, Private, and Effective!",
     review:
-      "I was skeptical about trying yet another joint pain supplement, but after hearing so many positive reviews , I decided to give this formula a chance. I'm so glad I did because my joint pain has increased significantly and I feel like my overall mobility has improved. Arthroflex 365 is the only joint pain supplement I will use from now on",
+      "No waiting rooms, no awkward conversations—just great service and fast delivery. Highly recommend!",
     img: "/images/testimonial-3.jpg",
     day: "4 Days",
   },
@@ -36,9 +35,9 @@ const reviews = [
     user_name: "Daniel H.",
     isVerified: true,
     ratings: 5,
-    title: "It’s a game changer",
+    title: "Can’t Believe it was That Easy!",
     review:
-      "I've been dealing with joint pain for years due to my active lifestyle , but Arthroflex 365 Ultra has been a game-changer. Not only has it helped alleviate my pain , but it also seems to have reduced inflammation throughout my body. I would highly recommend this joint pain and arthritis formula to anyone looking for releif.",
+      "Can’t believe it was that easy! The process was exactly as described. I would highly recommend.",
 
     img: "/images/testimonial-4.jpg",
     day: "7 Days",
@@ -47,13 +46,14 @@ const reviews = [
 
 export function CustomerReviews() {
   return (
-    <section className="relative mx-auto max-w-6xl space-y-2 p-4 text-center lg:p-6">
+    <section className="relative mx-auto max-w-6xl space-y-2 p-4 text-center lg:p-6 my-36">
       <p className="mx-auto max-w-[65ch] text-balance text-center text-2xl font-black leading-snug text-black md:text-[39px] lg:text-4xl">
-        Trusted by Thousands of Customers
+        Real People, Real Results
+
       </p>
-      <p className="mx-auto text-sm font-semibold leading-relaxed md:text-base lg:text-md">
+      {/* <p className="mx-auto text-sm font-semibold leading-relaxed md:text-base lg:text-md">
         Hear from Happy customers on how Arthroflex 365 Formula improved their life
-      </p>
+      </p> */}
       <ul className="divide-y divide-gray-200 text-start md:pt-5">
         {reviews.map(
           ({ title, review, ratings, user_name, img, day }, index) => (
@@ -76,10 +76,10 @@ export function CustomerReviews() {
                     <span>Verified Buyer</span>
                   </div>
                 </div>
-                <p className="col-span-2 flex items-center text-xs md:py-2 md:text-sm">
+                {/* <p className="col-span-2 flex items-center md:py-1 text-[12px]">
                   <IoIosCheckmark className="size-6 text-[#1f8e2a]" /> I
                   recommend this product
-                </p>
+                </p> */}
               </div>
               <div className="space-y-4">
                 <div className="flex items-center justify-between text-xs sm:text-sm">
@@ -98,10 +98,6 @@ export function CustomerReviews() {
                 {/* <p className="text-xs sm:text-sm">
                 Review left on: Nitric Oxide Organic Beets Single-Serve Packs
               </p> */}
-                <div className="flex items-center gap-x-2 text-xs sm:text-sm">
-                  Was this review helpful? <BiSolidLike /> 0 <BiSolidDislike />{" "}
-                  0
-                </div>
               </div>
             </li>
           ),

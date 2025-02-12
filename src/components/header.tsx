@@ -1,4 +1,6 @@
-import { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { BiSolidBadgeCheck } from "react-icons/bi";
 import { BsCart3, BsHeadset } from "react-icons/bs";
 import {
   FaArrowRight,
@@ -7,10 +9,6 @@ import {
   FaPhoneAlt,
   FaTruck,
 } from "react-icons/fa";
-import { BiSolidBadgeCheck } from "react-icons/bi";
-import { motion, AnimatePresence } from "framer-motion";
-import React from "react";
-import { Link } from "react-scroll";
 
 const slides = [
   {
@@ -87,7 +85,7 @@ export function Header() {
         }`}
       >
         <div className="w-full">
-          <div className="min-h-[1.875rem] overflow-hidden bg-[#EFEFE9] text-center text-brand-green">
+          <div className="min-h-[1.875rem] overflow-hidden bg-[#EFEFE9] text-center text-black py-2">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-4">
               <button className="outline-none" onClick={prevSlide}>
                 <FaChevronLeft className="size-[0.875rem] opacity-75 hover:scale-105 hover:opacity-100" />
@@ -123,15 +121,15 @@ export function Header() {
             </div>
           </div>
           <div className="color-green">
-            <div className="relative mx-auto flex min-h-[52px] sm:min-h-[60px] md:min-h-[70px] max-w-7xl items-center justify-end px-4 py-3 text-white lg:py-1">
+            <div className="relative mx-auto flex min-h-[52px] sm:min-h-[60px] md:min-h-[70px] max-w-7xl items-center justify-end px-4 py-8 text-white lg:py-1">
               <a
                 className="absolute right-1/2 translate-x-1/2 p-1 text-2xl focus:ring"
                 href="#"
               >
                 <h1 className="sr-only">Eco Health Funnel</h1>
                 <img
-                  className="h-full w-[6rem]"
-                  src="/images/img-logo.webp"
+                  className="h-full w-[8rem]"
+                  src="/images/logo.svg"
                   alt="logo"
                 />
               </a>
@@ -139,94 +137,14 @@ export function Header() {
                 <BsCart3 className="size-6" strokeWidth="0.5" />
               </button>
             </div>
+            <div className="text-center w-full bg-[#21bd00] py-4">
+              <h3 className="font-bold text-2xl text-white">Today Only: Sign Up and Save $10—With Speedy, Free Shipping</h3>
+            </div>
           </div>
         </div>
       </header>
 
       {/* Secondary navbar - shows when scrolling down */}
-      <nav
-        className={`fixed bottom-0 left-0 right-0 z-40 bg-white shadow-md transition-transform duration-300 md:bottom-auto md:top-0 ${
-          isScrollingDown ? "translate-y-0" : "md:-translate-y-full"
-        }`}
-      >
-        <div className="w-full border-b border-gray-200">
-          <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-            {/* Left Section */}
-            <div className="flex items-center gap-4">
-              <button className="hidden items-center justify-center md:flex">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3 12H21M3 6H21M3 18H21"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-
-              <a
-                href="#"
-                className="flex items-center justify-center gap-2 text-xl font-bold md:hidden"
-              >
-                <img
-                  className="h-[52px] w-auto"
-                  src="/images/hero-2.png"
-                  alt="SNAP"
-                />
-                <div className="text-sm font-semibold">
-                  +Free Shipping on
-                  <br /> orders over{" "}
-                  <span className="text-brand-lime">$50</span>
-                </div>
-              </a>
-            </div>
-            <div className="gap-6 md:flex md:items-center">
-              <div className="hidden md:block">
-                <div className="text-sm font-semibold">
-                  Top Notch Customer Support
-                </div>
-                <div className="text-sm text-gray-600">
-                  90-Day Money Back Guarantee
-                </div>
-              </div>
-              <div className="hidden md:block">
-                <div className="text-sm font-semibold">
-                  Free Shipping on orders over{" "}
-                  <span className="text-brand-lime">$50</span>
-                </div>
-                <div className="text-sm text-gray-600">Fast Delivery</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 sm:gap-6">
-              <Link to="packages" smooth={true} duration={500}  offset={-50}>
-              <motion.button
-                className="flex items-center gap-2 rounded-md bg-[#28A745] px-4 py-2 text-xs font-medium text-white shadow-lg transition-colors hover:bg-[#218838] sm:px-6 sm:py-2 sm:text-sm"
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.95 }}
-                animate={{
-                  scale: [1, 1.05, 1],
-                  transition: {
-                    duration: 1.4,
-                    ease: "easeInOut",
-                    repeat: Infinity,
-                    repeatType: "mirror",
-                  },
-                }}
-              >
-                <span className="text-[18px] font-bold">Add To Cart</span>
-              </motion.button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
 
       {/* Spacer to prevent content from jumping */}
       <div className="h-[calc(1.4rem+3rem)] md:h-[calc(1.4rem+5rem)]"></div>

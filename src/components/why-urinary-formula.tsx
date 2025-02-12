@@ -2,7 +2,7 @@ import { config } from "../config";
 
 export function WhyUrinaryFormula() {
   return (
-    <section className="relative mt-12 overflow-hidden bg-[#EEF7FF] py-5 sm:py-4 md:mt-16 md:py-8 xl:mt-20">
+    <section className="relative mt-12 overflow-hidden bg-[#EEF7FF] py-6 sm:py-8 md:mt-16 md:py-14 xl:mt-20">
       <h3 className="title-no !important text-[#B11E54]">
       Why ArthroFlex 365?      </h3>
       <p className="px pb-2 text-center text-xl font-semibold text-black sm:text-2xl md:pb-4 md:text-[25px]">
