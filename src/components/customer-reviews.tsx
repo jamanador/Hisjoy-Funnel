@@ -44,9 +44,9 @@ const reviews = [
   },
 ] as const;
 
-export function CustomerReviews() {
+export function Reviews() {
   return (
-    <section className="relative mx-auto max-w-6xl space-y-2 p-4 text-center lg:p-6 my-12">
+    <section className="relative mx-auto max-w-6xl space-y-2 p-4 text-center lg:p-6 my-6">
       <p className="mx-auto max-w-[65ch] text-balance text-center text-2xl font-black leading-snug text-black md:text-[39px] lg:text-4xl">
         Real People, Real Results
 
