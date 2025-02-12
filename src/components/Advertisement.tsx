@@ -3,9 +3,9 @@ export default function Advertisement() {
     return (
         <div className="flex flex-col items-center p-6 space-y-6">
             {/* Button Section */}
-            <div className="flex items-center space-x-2 bg-green-500 text-white px-4 py-2 rounded-lg">
-                <span className="text-lg">✓</span>
-                <span className="text-sm font-semibold">No video or phone call required!</span>
+            <div className="flex items-center justify-center space-x-2 bg-brand-secondary text-white px-4 py-2 rounded-lg w-8/12">
+                <span className="text-lg font-bold">✓</span>
+                <span className="text-sm font-bold text-center">No video or phone call required!</span>
             </div>
 
             {/* As Advertised On Section */}

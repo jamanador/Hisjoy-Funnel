@@ -29,7 +29,7 @@ export default function Treatment() {
                 )}
                 {showThankYou && (
                     <p className="text-lg text-green-600 mt-4 font-bold animate-pulse">
-                        Thank you for your interest! I'll notify you soon.
+                        Thank you for your interest! I'll notify you soon. he
                     </p>
                 )}
             </div>

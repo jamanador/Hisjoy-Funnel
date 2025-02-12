@@ -8,8 +8,8 @@ export default {
       },
       colors: {
         "neutral-dark": "#333333",
-        "neutral-light": "#FFFFFF",
-        "brand-green": "#244442",
+        "brand-three": "#daeef3",
+        "brand-four": "#badde7",
         "brand-third": "#316d89",
         "brand-secondary": "#22C55E",
         "brand-maroon": "#6fb1c8",
