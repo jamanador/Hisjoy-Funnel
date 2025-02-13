@@ -1,7 +1,7 @@
 
 export default function PricingTable() {
     return (
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto p-2 my-4 md:my-8">
             <h2 className="text-center text-lg lg:text-2xl font-extrabold my-4 lg:my-8 text-brand-maroon">
                 Lowest Price Anywhere, Guaranteed.
             </h2>

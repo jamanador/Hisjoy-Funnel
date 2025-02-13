@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { BiSolidBadgeCheck } from "react-icons/bi";
-import { BsCart3, BsHeadset } from "react-icons/bs";
+import { BsHeadset } from "react-icons/bs";
 import {
   FaArrowRight,
   FaChevronLeft,
@@ -10,7 +10,7 @@ import {
   FaTruck,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import MobileMenu from "./MobileMenu";
 const slides = [
   {
     text: "Need Assistance? (844)-640-0728",
@@ -132,22 +132,21 @@ export function Header() {
                   alt="logo"
                 />
               </Link>
-              <button className="transition-transform hover:scale-110">
-                <BsCart3 className="size-6" strokeWidth="0.5" />
-              </button>
+              <div className="">
+                <h3 className="text-white font-bold hidden lg:block">
+                  <a href="tel:8446400728">Call Us (844)-640-0728</a>
+                </h3>
+
+                <MobileMenu />
+              </div>
             </div>
-            <div className="text-center w-full bg-[#21bd00] py-2 px-4 md:py-4">
-              <h3 className="font-semibold md:font-bold text-[13px] md:text-lg lg:text-2xl text-white">Today Only: Sign Up and Save $10—With Speedy, Free Shipping</h3>
-            </div>
+
           </div>
         </div>
       </header>
-
-      {/* Secondary navbar - shows when scrolling down */}
-
       {/* Spacer to prevent content from jumping */}
       {/* Add a spacer div to push content down */}
-      <div className="h-[140px] md:h-[180px] lg:h-[200px]"></div>
+      <div className="h-[90px] md:h-[110px] lg:h-[110px]"></div>
 
     </>
   );

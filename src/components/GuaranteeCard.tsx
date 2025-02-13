@@ -1,7 +1,7 @@
 
 const GuaranteeCard = () => {
   return (
-    <div className="flex justify-center items-center my-8">
+    <div className="flex justify-center items-center my-4 md:my-8 px-2">
       <div className="bg-white rounded-lg p-6 w-full text-center border border-gray-200">
         <div className="flex justify-center">
           <img

@@ -14,14 +14,14 @@ const SuccessCard = () => {
     }, []);
 
     return (
-        <div className="p-4 flex justify-center">
+        <div className="px-2 flex justify-center my-4 md:my-8">
             <div className={`border ${borderColor} rounded-lg p-4 bg-blue-50 w-full transition duration-500 ease-in-out`}>
                 {/* Clinically Proven Badge */}
                 <div className="justify-center justify-items-center border-b pb-3 mb-3">
                     <div className="flex items-center bg-green-100 border-2 border-brand-secondary rounded-full w-12 h-12 justify-center mb-4">
                         <img src="/images/clinic.png" alt="Clinically Proven" className="w-6 h-6" />
                     </div>
-                    <span className="text-green-700 font-bold text-sm md:text-xl">Clinically Proven</span>
+                    <span className="text-brand-maroon font-bold text-sm md:text-xl">Clinically Proven</span>
                 </div>
 
                 {/* Success Rate Section */}
@@ -31,14 +31,14 @@ const SuccessCard = () => {
                             <span key={i} className="text-yellow-500 text-4xl">★</span>
                         ))}
                     </div>
-                    <h2 className={`${textColor} font-bold text-xl animate-pulse md:text-3xl`}>94% Success Rate</h2>
-                    <p className="text-green-800 font-bold text-lg">in Improving Erections</p>
+                    <h2 className={`${textColor} font-bold text-2xl animate-pulse md:text-3xl`}>94% Success Rate</h2>
+                    <p className="text-green-800 font-bold text-lg">In Improving Erections</p>
                 </div>
 
                 {/* Study Information */}
-                <p className="text-green-700 text-sm mt-4 text-center">
+                <p className="text-black text-sm mt-4 text-center">
                     A clinical study of <span className="font-bold">979 men found that 94% were satisfied</span> with Sildenafil’s effects on their erections. PMID:
-                    <a href="#" className="text-green-800 font-semibold underline ml-1">18516312</a>
+                    <a href="#" className="text-brand-third font-semibold underline ml-1">18516312</a>
                 </p>
             </div>
         </div>

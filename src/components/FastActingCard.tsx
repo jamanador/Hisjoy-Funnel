@@ -1,7 +1,7 @@
 
 const FastActingCard = () => {
     return (
-        <div className="p-4 space-y-4">
+        <div className="p-2 my-4 md:my-8">
             {/* Fast-Acting Section */}
             <div className="border border-gray-300 rounded-xl ">
                 <div className="bg-brand-third text-white p-4">

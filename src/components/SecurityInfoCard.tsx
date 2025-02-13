@@ -16,7 +16,7 @@ const features = [
 
 const SecurityInfoCard = () => {
   return (
-    <div className="flex justify-center items-center my-8">
+    <div className="flex justify-center items-center my-4 md:my-8 px-2">
       <div className="rounded-lg p-6 w-full text-center bg-blue-50">
         <h2 className="text-xl md:text-2xl font-bold text-gray-900">
           Your Information Is

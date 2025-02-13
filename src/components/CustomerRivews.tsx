@@ -37,7 +37,7 @@ const reviews = [
 
 export function CustomerReviews() {
   return (
-    <section className="p-4 space-y-4">
+    <section className="p-2 my-4 md:my-8">
       <div className="border border-gray-300 rounded-lg">
         <div className="p-4 rounded-t-lg text-center">
           <h3 className="font-bold md:text-xl text-[15px] text-black mt-5">

@@ -1,10 +1,10 @@
-import { twMerge } from "tailwind-merge";
 import { Star } from "lucide-react";
 import { Link } from "react-scroll";
+import { twMerge } from "tailwind-merge";
 
 export function TestimonialSection() {
   return (
-    <div className="secGap mx-auto max-w-7xl lg:px-0">
+    <div className="secGap mx-auto max-w-7xl lg:px-0 px-2">
       <div
         className={twMerge(
           "w-full bg-[url('/images/Bgherooo2.png')] bg-cover bg-center bg-no-repeat object-fill px-2 py-12 md:pt-12 text-center shadow-lg md:bg-[url('/images/Bgherooo1.png')] lg:px-4 lg:pt-14 xl:px-2 xl:pt-12",

@@ -1,7 +1,7 @@
 
 const DeliveryCard = () => {
     return (
-        <div className="p-4 space-y-4 ">
+        <div className="p-2 space-y-4 ">
             {/* Delivery Section */}
             <div className="border border-gray-300 rounded-xl bg-blue-50 ">
                 <div className="p-4 rounded-t-lg text-center bg-brand-third">

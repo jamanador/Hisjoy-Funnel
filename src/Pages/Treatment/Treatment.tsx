@@ -13,8 +13,9 @@ export default function Treatment() {
     };
 
     return (
-        <div className="text-center">
-            <div className="bg-gray-100 border border-gray-200 text-black px-4 py-6 rounded my-14 text-center">
+        <div className="text-center ">
+           <div className="max-w-xl mx-auto">
+           <div className="bg-gray-100 border border-gray-200 text-black px-4 py-6 rounded my-14 text-center">
                 <h1 className="text-3xl font-bold text-gray-800 mb-2">Under Development</h1>
                 <p className="text-lg text-gray-600 mb-8">
                     I'm currently working on something exciting! Be cool!
@@ -33,6 +34,7 @@ export default function Treatment() {
                     </p>
                 )}
             </div>
+           </div>
         </div>
     );
 }
