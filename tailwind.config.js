@@ -10,7 +10,7 @@ export default {
         "neutral-dark": "#333333",
         "brand-three": "#daeef3",
         "brand-four": "#badde7",
-        "brand-third": "#316d89",
+        "brand-third": "#6fb1c8",
         "brand-secondary": "#22C55E",
         "brand-maroon": "#6fb1c8",
       },

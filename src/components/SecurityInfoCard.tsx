@@ -1,13 +1,28 @@
 
+const features = [
+  {
+    icon: <img src="/images/bnr-list2-icn1.png" alt="U.S. Licensed Pharmacy" className="w-12 h-12" />, 
+    title: "U.S. Licensed Pharmacy",
+  },
+  {
+    icon: <img src="/images/bnr-list2-icn2.png" alt="HIPAA Compliant" className="w-12 h-12" />, 
+    title: "HIPAA Compliant",
+  },
+  {
+    icon: <img src="/images/bnr-list2-icn3.png" alt="Lowest Price Guarantee" className="w-12 h-12" />, 
+    title: "Lowest Price Guarantee",
+  },
+];
+
 const SecurityInfoCard = () => {
   return (
     <div className="flex justify-center items-center my-8">
-      <div className="bg-white rounded-lg p-6 w-full text-center border border-gray-200">
+      <div className="rounded-lg p-6 w-full text-center bg-blue-50">
         <h2 className="text-xl md:text-2xl font-bold text-gray-900">
           Your Information Is
-          <span className="block text-brand-secondary">Protected and Confidential</span>
+          <span className="block text-brand-secondary underline">Protected and Confidential</span>
         </h2>
-        <div className="flex justify-center my-4">
+        <div className="flex justify-center mt-5 mb-2">
           <img
             src="/images/protect.svg"
             alt="Security Icon"
@@ -21,12 +36,14 @@ const SecurityInfoCard = () => {
           <a href="#" className="text-blue-500 font-medium"> highest level of confidentiality</a>,
           ensuring your privacy is always protected.
         </p> */}
-        <div className="flex flex-wrap justify-center gap-4 mt-6">
-          <img src="/images/securityicon1.png" alt="HIPAA Compliant" className="h-20" />
-          <img src="/images/securityicon2.png" alt="FDA Approved" className="h-20" />
-          <img src="/images/securityicon3.png" alt="Licensed Pharmacists" className="h-20" />
-          {/* <img src="/icons/legitscript.png" alt="Legit Script Verified" className="h-10" /> */}
+       <div className="bg-blue-50 py-4 px-4 md:px-12 flex flex-col md:flex-row justify-center items-center gap-0 md:gap-12 text-center">
+      {features.map((feature, index) => (
+        <div key={index} className="flex flex-col items-center">
+          <div className="p-3">{feature.icon}</div>
+          <p className="text-sm font-semibold text-gray-800 mt-2">{feature.title}</p>
         </div>
+      ))}
+    </div>
       </div>
     </div>
   );

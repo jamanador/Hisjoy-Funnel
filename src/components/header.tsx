@@ -136,7 +136,7 @@ export function Header() {
                 <BsCart3 className="size-6" strokeWidth="0.5" />
               </button>
             </div>
-            <div className="text-center w-full bg-[#21bd00] py-2 md:py-4">
+            <div className="text-center w-full bg-[#21bd00] py-2 px-4 md:py-4">
               <h3 className="font-semibold md:font-bold text-[13px] md:text-lg lg:text-2xl text-white">Today Only: Sign Up and Save $10—With Speedy, Free Shipping</h3>
             </div>
           </div>
