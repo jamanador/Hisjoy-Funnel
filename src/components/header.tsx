@@ -1,43 +1,49 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import { BiSolidBadgeCheck } from "react-icons/bi";
-import { BsHeadset } from "react-icons/bs";
 import {
   FaArrowRight,
+  FaCapsules,
+  FaCheckCircle,
   FaChevronLeft,
   FaChevronRight,
+  FaHeadset,
   FaPhoneAlt,
-  FaTruck,
+  FaShippingFast,
+  FaUserMd,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
+
 const slides = [
   {
-    text: "Need Assistance? (844)-640-0728",
-    link: "tel:(844)-640-0728",
-    icon: FaPhoneAlt,
+    text: "Top Notch Customer Service",
+    link: "#",
+    icon: FaHeadset,
   },
   {
-    text: "90 Day Money Back Guarantee",
+    text: "Free Doctor Visit - Prescriptions",
     link: "#",
-    icon: BiSolidBadgeCheck,
+    icon: FaUserMd,
   },
   {
-    text: "Free Shipping on orders over $50",
+    text: "Ships from US Licensed Pharmacies",
     link: "#",
-    icon: FaTruck,
+    icon: FaCapsules,
   },
   {
-    text: "Top Notch Customer Support ",
+    text: "FDA Approved Medications",
     link: "#",
-    icon: BsHeadset,
+    icon: FaCheckCircle,
   },
   {
-    text: "Fast Delivery ",
+    text: "Fast Free Shipping",
     link: "#",
-    icon: FaTruck,
+    icon: FaShippingFast,
   },
 ];
+
+// export default slides;
+
 
 export function Header() {
   const [isScrollingDown, setIsScrollingDown] = useState(false);
@@ -133,8 +139,8 @@ export function Header() {
                 />
               </Link>
               <div className="">
-                <h3 className="text-white font-bold hidden lg:block">
-                  <a href="tel:8446400728">Call Us (844)-640-0728</a>
+                <h3 className="text-white font-bold hidden md:block">
+                  <a href="tel:844-640-0722">Call Us 844-640-0722</a>
                 </h3>
 
                 <MobileMenu />

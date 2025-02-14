@@ -10,7 +10,7 @@ type MarqueeBannerProps = {
     textColor = "text-white",
   }) => {
     return (
-      <div className={`w-screen ${bgColor} ${textColor} lg:py-6 md:py-4 py-4 text-center font-bold lg:text-2xl text-sm md:text-lg leading-relaxed ml-[-4px]`}>
+      <div className={`w-screen ${bgColor} ${textColor} lg:py-6 md:py-4 py-4 text-center font-bold lg:text-2xl text-lg md:text-lg leading-relaxed ml-[-4px] px-4`}>
         {text}
       </div>
     );

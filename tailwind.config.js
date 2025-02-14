@@ -20,11 +20,16 @@ export default {
       },
       animation: {
         marquee: "marquee 10s linear infinite",
+        "fade-in-up": "fade-in-up 0.8s ease-out",
       },
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(-100%)" },
+        },
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },
     },
