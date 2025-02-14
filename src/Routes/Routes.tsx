@@ -1,13 +1,14 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import Main from "../Layout/Layout"
+import Layout from "../Layout/Layout"
 import Home from "../Pages/Home/Home"
+import ProductPage from "../Pages/Treatment/SingleProduct"
 import Treatment from "../Pages/Treatment/Treatment"
 
 export default function Routes() {
     const router = createBrowserRouter([
         {
             path: '/',
-            element: <Main />,
+            element: <Layout/>,
             children: [
                 {
                     path: '/',
@@ -20,7 +21,12 @@ export default function Routes() {
                 {
                     path:'/home/treatment',
                     element:<Treatment/>
+                },
+                {
+                    path: '/home/treatment/product/:productName',
+                    element: <ProductPage />
                 }
+
 
             ]
         }
