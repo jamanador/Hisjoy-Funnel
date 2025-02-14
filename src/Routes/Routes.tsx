@@ -1,8 +1,9 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import Layout from "../Layout/Layout"
-import Home from "../Pages/Home/Home"
-import ProductPage from "../Pages/Treatment/SingleProduct"
-import Treatment from "../Pages/Treatment/Treatment"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "../Layout/Layout";
+import Home from "../Pages/Home/Home";
+import ProcessingPage from "../Pages/Treatment/ProcessingPage"; // Import Processing Page
+import ProductPage from "../Pages/Treatment/SingleProduct";
+import Treatment from "../Pages/Treatment/Treatment";
 
 export default function Routes() {
     const router = createBrowserRouter([
@@ -23,17 +24,16 @@ export default function Routes() {
                     element:<Treatment/>
                 },
                 {
+                    path: '/home/treatment/processing/:productName',
+                    element: <ProcessingPage />
+                },
+                {
                     path: '/home/treatment/product/:productName',
                     element: <ProductPage />
                 }
-
-
             ]
         }
-    ])
-    return (
-        <div>
-            <RouterProvider router={router}></RouterProvider>
-        </div>
-    )
+    ]);
+    
+    return <RouterProvider router={router} />;
 }

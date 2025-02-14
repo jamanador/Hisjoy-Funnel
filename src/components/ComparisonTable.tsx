@@ -13,7 +13,8 @@ const ComparisonTable: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center items-center my-12 md:mt-16 md:mb-8 px-2">
+   <div>
+     <div className="flex justify-center items-center my-12 md:mt-16 md:mb-8 px-2">
       <div className="w-full bg-white rounded-lg overflow-hidden">
         {/* Header */}
         <div className="bg-blue-50 py-3 text-center text-lg sm:text-xl font-bold">
@@ -53,6 +54,8 @@ const ComparisonTable: React.FC = () => {
         </table>
       </div>
     </div>
+    <h3 className="text-center font-medium py-8 text-black underline">ACT NOW - get up to 2 MONTHS FREE</h3>
+   </div>
   );
 };
 
