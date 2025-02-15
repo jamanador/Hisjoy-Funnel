@@ -22,11 +22,11 @@ const ButtonComponent = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4 p-6 max-w-md mx-auto">
+    <div className="flex flex-col gap-4 p-6 max-w-xl mx-auto">
       {buttons.map((btn, index) => (
         <button
           key={index}
-          className={`w-full py-3 text-white text-lg font-semibold rounded-md transition-all duration-200 ${
+          className={`w-full py-3 px-4 text-white text-lg font-semibold rounded-md transition-all duration-200 ${
             active === index.toString() ? "bg-blue-900" : ""
           }`}
           style={{

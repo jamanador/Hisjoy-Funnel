@@ -1,7 +1,7 @@
 
 export default function Advertisement() {
     return (
-        <div className="flex flex-col items-center p-2 mb-4 md:my-8">
+        <div className="flex flex-col items-center p-2 mb-4 md:my-8 ">
             {/* Button Section */}
             <div className="flex items-center justify-center space-x-2 bg-brand-secondary text-white px-4 py-3 rounded-lg md:w-9/12 w-full mb-4">
                 <span className="text-[12px] md:text-lg font-bold">✓</span>
@@ -11,7 +11,7 @@ export default function Advertisement() {
             {/* As Advertised On Section */}
             <div className="flex items-center space-x-4">
                 <div className="flex items-center">
-                    <img src="/images/advertisementlogo1.webp" alt="USA Today" className="h-full w-full lg:w-9/12 mx-auto" />
+                    <img src="/images/advertisementlogo1.webp" alt="USA Today" className="h-full w-full  mx-auto" />
                     {/* <img src="forbes-logo.png" alt="Forbes" className="h-6" />
                     <img src="msnbc-logo.png" alt="MSNBC" className="h-6" />
                     <img src="fox-logo.png" alt="FOX" className="h-6" />

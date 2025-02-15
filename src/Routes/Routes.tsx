@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import Home from "../Pages/Home/Home";
 import ProcessingPage from "../Pages/Treatment/ProcessingPage"; // Import Processing Page
-import ProductPage from "../Pages/Treatment/SingleProduct";
+import SingleProduct from "../Pages/Treatment/SingleProduct";
 import Treatment from "../Pages/Treatment/Treatment";
 
 export default function Routes() {
@@ -29,7 +29,7 @@ export default function Routes() {
                 },
                 {
                     path: '/home/treatment/product/:productName',
-                    element: <ProductPage />
+                    element: <SingleProduct/>
                 }
             ]
         }

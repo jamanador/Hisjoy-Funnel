@@ -6,15 +6,16 @@ const tasks = [
     { task: "Searching Doctor Network 1", status: "No Doctors Available", isError: true },
     { task: "Searching Doctor Network 2", status: "1 Licensed Doctor Available" },
     { task: "Checking Pharmacy for Stock", status: "Generic Cialis® Stock Available - Low Stock" },
-    { task: "Checking for Discount Code", status: "Qualified for $10 Discount" },
-    { task: "Gathering Shipping Estimate", status: "Qualified for Free 3 Day Shipping!" }
+    { task: "Checking for Discount Code", status: "Instead of $10 discount" },
+    { task: "Gathering Shipping Estimate", status: "Qualified for 2 Free months Shipping!" }
 ];
 
 const ProcessingPage = () => {
     const navigate = useNavigate();
     const [currentTask, setCurrentTask] = useState(0);
     const [showStatus, setShowStatus] = useState(false);
-    const progress = ((currentTask + 1) / tasks.length) * 100;
+    // const progress = ((currentTask + 1) / tasks.length) * 100;
+    const progress = Math.min((currentTask / (tasks.length - 1)) * 100, 100);
 
     useEffect(() => {
         if (currentTask < tasks.length) {
@@ -36,13 +37,12 @@ const ProcessingPage = () => {
 
     return (
         <div>
-            <MarqueeBanner
-                text="Checking Eligibility" className="bg-red-400 text-white animate-pulse"/>
+            <MarqueeBanner text="Checking Eligibility" className="bg-red-400 text-white animate-pulse"/>
 
             <div className="flex flex-col items-center p-6 justify-items-center juctify-center md:mt-10 lg:mt-20">
                 <h1 className="text-2xl font-bold mb-4">Checking Doctor & Stock Availability</h1>
                 <div className="w-full max-w-lg bg-gray-200 rounded-full h-4 overflow-hidden mb-6">
-                    <div className="bg-green-500 h-full transition-all" style={{ width: `${progress}%` }}></div>
+                    <div className="bg-green-500 h-full transition-all duration-500 ease-in-out" style={{ width: `${progress}%` }}></div>
                 </div>
                 <p className="text-sm text-gray-500 mb-4">Total Progress: {Math.round(progress)}%</p>
                 <table className="w-full max-w-lg border border-gray-300">

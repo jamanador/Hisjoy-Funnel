@@ -21,7 +21,7 @@ const SuccessCard = () => {
                 {/* Clinically Proven Badge */}
                 <div className="justify-center justify-items-center border-b pb-3 mb-3 w-full text-center">
                     <div className="flex items-center justify-center mb-4">
-                        <img src="/images/bnr-img.jpg" alt="Clinically Proven" className="w-full h-fit" />
+                        <img src="/images/bnr-img.jpg" alt="Clinically Proven" className="w-full" />
                     </div>
                     <span className="text-brand-maroon font-bold text-md sm:text-xl md:text-2xl">Clinically Proven</span>
                 </div>

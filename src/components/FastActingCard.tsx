@@ -17,8 +17,7 @@ const FastActingCard = () => {
                     </div>
                     <div className="sm:ml-4 text-center sm:text-left">
                         <p className="text-gray-700 text-sm">
-                            Generic Viagra and Generic Cialis are <span className="font-bold">fast-acting.</span> As soon as <span className="font-bold">30 minutes</span> after taking a tablet, you can achieve a
-                            <span className="font-bold underline">harder, longer-lasting erection on demand.</span>
+                            Generic Viagra and Generic Cialis are <span className="font-bold">fast-acting.</span> As soon as <span className="font-bold">30 minutes</span> after taking a tablet, you can achieve a<span className="font-bold underline pl-1">harder, longer-lasting erection on demand.</span>
                         </p>
                     </div>
                 </div>

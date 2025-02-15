@@ -2,11 +2,15 @@ import React from "react";
 
 const NewFooter: React.FC = () => {
     return (
-        <footer className="bg-brand-maroon w-full py-8 text-white mt-8 lg:mt-16">
+        <footer className="bg-brand-maroon w-full py-8 text-white mt-8 lg:mt-16 footer_cls">
             <div className="max-w-4xl mx-auto px-6 flex flex-col md:flex-row md:justify-between items-center md:items-start gap-6">
                 {/* Logo Section */}
                 <div className="mb-6 md:mb-0">
                     <img src="/images/logo.svg" alt="Hisjoy Logo" className="h-14" />
+                    <div className="text-left md:mt-40 text-sm hidden md:block">
+                <p>© Hisjoy LLC</p>
+                <p>All Rights Reserved</p>
+            </div>
                 </div>
 
                 {/* Links Sections */}
@@ -43,7 +47,7 @@ const NewFooter: React.FC = () => {
             </div>
 
             {/* Bottom Section */}
-            <div className="text-center mt-6 text-sm">
+            <div className="text-center mt-6 text-sm block md:hidden">
                 <p>© Hisjoy LLC</p>
                 <p>All Rights Reserved</p>
             </div>
