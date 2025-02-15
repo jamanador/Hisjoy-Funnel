@@ -19,7 +19,7 @@ const SingleProduct = () => {
 
     return (
         <div className="">
-            <MarqueeBanner text="Fantasic News! Your Eligible" />
+            <MarqueeBanner text="Fantastic News: You’re Eligible!" />
             <div className="max-w-xl mx-auto flex flex-col items-center justify-center w-full p-6 border my-20">
                 <h1 className="text-3xl font-bold text-gray-800 mb-4">{product.name}</h1>
                 <img src={product.image} alt={product.name} className="w-40 h-28 mb-4" />

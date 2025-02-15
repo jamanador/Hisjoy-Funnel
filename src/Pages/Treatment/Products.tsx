@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const products = [
-    { name: "Cialis", category: "cialis", image: "/images/cialis.png" },
-    { name: "Viagra", category: "viagra", image: "/images/viagra.png" }
+    { name: "Cialis", category: "cialis", image: "/images/viagra.png" },
+    { name: "Viagra", category: "viagra", image: "/images/cialis.png" }
 ];
 
 const ProductsItem = () => {

@@ -13,49 +13,49 @@ const ComparisonTable: React.FC = () => {
   };
 
   return (
-   <div>
-     <div className="flex justify-center items-center my-12 md:mt-16 md:mb-8 px-2">
-      <div className="w-full bg-white rounded-lg overflow-hidden">
-        {/* Header */}
-        <div className="bg-blue-50 py-3 text-center text-lg sm:text-xl font-bold">
-          <span className="border-b-2 border-red-500 pb-1 ">{data.header}</span>
-        </div>
+    <div>
+      <div className="flex justify-center items-center my-12 md:mt-16 md:mb-8 px-2">
+        <div className="w-full bg-white rounded-lg overflow-hidden">
+          {/* Header */}
+          <div className="bg-blue-50 py-3 text-center text-lg sm:text-xl font-bold">
+            <span className="border-b-2 border-red-500 pb-1 ">{data.header}</span>
+          </div>
 
-        {/* Table */}
-        <table className="w-full border-collapse text-center text-sm sm:text-base">
-          <thead>
-            <tr className="bg-gray-200">
-              {data.columns.map((column, index) => (
-                <th key={index} className="py-2 px-3 border text-[11px] md:text-lg">{column}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody className="font-semibold">
-            {data.features.map(({ label, values }, index) => (
-              <tr key={index}>
-                <td className="py-2 px-3 border text-white-900 text-[11px]  md:text-lg">{label}</td>
-                {values.map((value, i) => (
-                  <td key={i} className="py-2 px-3 border text-[11px] md:text-lg">{value}</td>
+          {/* Table */}
+          <table className="w-full border-collapse text-center text-sm sm:text-base">
+            <thead>
+              <tr className="bg-gray-200">
+                {data.columns.map((column, index) => (
+                  <th key={index} className="py-2 px-3 border text-[11px] md:text-lg">{column}</th>
                 ))}
               </tr>
-            ))}
-            {/* Price Row */}
-            <tr className="bg-brand-maroon text-white">
-              <td className="py-2 px-3 border">Price</td>
-              {Array(2).fill(null).map((_, i) => (
-                <td key={i} className="py-2 px-3 border">
-                  <span className="bg-white text-black font-bold px-3 py-1 rounded text-[13px] md:text-lg">
-                    {data.price}
-                  </span>
-                </td>
+            </thead>
+            <tbody className="font-semibold">
+              {data.features.map(({ label, values }, index) => (
+                <tr key={index}>
+                  <td className="py-2 px-3 border text-white-900 text-[11px]  md:text-lg">{label}</td>
+                  {values.map((value, i) => (
+                    <td key={i} className="py-2 px-3 border text-[11px] md:text-lg">{value}</td>
+                  ))}
+                </tr>
               ))}
-            </tr>
-          </tbody>
-        </table>
+              {/* Price Row */}
+              <tr className="bg-brand-maroon text-white">
+                <td className="py-2 px-3 border">Price</td>
+                {Array(2).fill(null).map((_, i) => (
+                  <td key={i} className="py-2 px-3 border">
+                    <span className="bg-white text-black font-bold px-3 py-1 rounded text-[13px] md:text-lg">
+                      {data.price}
+                    </span>
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
+      <h3 className="text-center font-medium md:py-4 hover:text-brand-secondary transition-all duration-300 text-black underline hover:transform hover:translate-x-3 hover:font-bold">ACT NOW - Get Up to 2 MONTHS FREE</h3>
     </div>
-    <h3 className="text-center font-medium py-8 text-black underline">ACT NOW - get up to 2 MONTHS FREE</h3>
-   </div>
   );
 };
 

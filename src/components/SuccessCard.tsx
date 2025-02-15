@@ -39,9 +39,10 @@ const SuccessCard = () => {
 
                 {/* Study Information */}
                 <p className="text-black text-sm mt-4 mb-7 text-center px-2">
-                    A clinical study of <span className="font-bold">979 men found that 94% were satisfied</span> with Sildenafil’s effects on their erections. PMID:
-                    <a href="#" className="text-brand-third font-semibold underline ml-1">18516312</a>
-                </p>
+    In a well-published study, <span className="font-bold">91% of men with ED reported improvement</span> with Viagra® (Sildenafil) and an <span className="font-bold">88% success rate</span> for Cialis® (Tadalafil).
+</p>
+
+
             </div>
         </div>
     );

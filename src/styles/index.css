@@ -67,7 +67,6 @@
 }
 
 .footer_cls {
-  @apply w-full;
   width: 100vw;
   /* Ensures the footer takes the full viewport width */
   position: relative;
