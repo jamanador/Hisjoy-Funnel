@@ -21,6 +21,8 @@ export default {
       animation: {
         marquee: "marquee 10s linear infinite",
         "fade-in-up": "fade-in-up 0.8s ease-out",
+        pulseBg: "pulseBg 1.5s infinite",
+        pulseBorder: "pulseBorder 1.5s infinite ease-in-out",
       },
       keyframes: {
         marquee: {
@@ -30,6 +32,14 @@ export default {
         "fade-in-up": {
           "0%": { opacity: "0", transform: "translateY(20px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        pulseBg: {
+          "0%, 100%": { backgroundColor: "#6fb1c8" }, // Default maroon color
+          "50%": { backgroundColor: "#22C55E" }, // Lighter red for pulse effect
+        },
+        pulseBorder: {
+          "0%, 100%": { borderColor: "#6fb1c8" }, // Default red
+          "50%": { borderColor: "#22C55E" }, // Lighter red
         },
       },
     },

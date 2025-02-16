@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { MarqueeBanner } from "../../components/MarqueeBanner";
 
 const tasks = [
@@ -11,6 +11,8 @@ const tasks = [
 ];
 
 const ProcessingPage = () => {
+    const { productName } = useParams()
+    // console.log(data)
     const navigate = useNavigate();
     const [currentTask, setCurrentTask] = useState(0);
     const [showStatus, setShowStatus] = useState(false);
@@ -31,17 +33,17 @@ const ProcessingPage = () => {
 
             return () => clearTimeout(taskTimer);
         } else {
-            setTimeout(() => navigate(`/home/treatment/product/cialis`), 1000);
+            setTimeout(() => navigate(`/home/treatment/product/${productName}`), 1000);
         }
-    }, [currentTask, navigate]);
+    }, [currentTask, navigate, productName]);
 
     return (
         <div>
-            <MarqueeBanner text="Checking Eligibility" className="bg-red-400 text-white animate-pulse"/>
+            <MarqueeBanner text="Checking Eligibility" className="bg-red-400 text-white animate-pulse" />
 
             <div className="flex flex-col items-center p-6 justify-items-center juctify-center md:mt-10 lg:mt-20">
                 <h1 className="text-2xl font-bold mb-4">Checking Doctor & Stock Availability</h1>
-                <div className="w-full max-w-lg bg-gray-200 rounded-full h-4 overflow-hidden mb-6">
+                <div className="w-full max-w-lg bg-gray-200 rounded-full h-5 overflow-hidden mb-6">
                     <div className="bg-green-500 h-full transition-all duration-500 ease-in-out" style={{ width: `${progress}%` }}></div>
                 </div>
                 <p className="text-sm text-gray-500 mb-4">Total Progress: {Math.round(progress)}%</p>

@@ -10,7 +10,7 @@ const FastActingCard = () => {
                 <div className="p-4 flex flex-col sm:flex-row items-center">
                     <div className="w-24 h-24 flex-shrink-0">
                         <img
-                            src="/images/30-minutes.webp"
+                            src="/images/30min.png"
                             alt="30 Minute Timer"
                             className="w-full h-full object-contain"
                         />
