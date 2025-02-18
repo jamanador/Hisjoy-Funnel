@@ -1,58 +1,132 @@
-export const config = {
-  bannerOfferings: [
-    "Instant Relief – Feel Joint Comfort Starting in Just Weeks!",
-    "Clinically Proven to Reduce Stiffness by up to 68%!",
-    "Boosts Joint Lubrication for Smoother, Pain-Free Movement!",
-    "Strengthens Cartilage & Reduces Inflammation for Long-Term Joint Health!",
-    "Targets Bone-on-Bone Discomfort – A Breakthrough in Joint Repair!"
-  ],
-  packages: [
-    {
-      name: "Bronze Good Value",
-      title: "1 Bottle",
-      image: "/images/img-why-section.png",
-    },
-    {
-      name: "Gold Best Value",
-      title: "Buy 3, Get 2 Free!",
-      image: "/images/img-why-section.png",
-    },
-    {
-      name: "Silver Great Value",
-      title: "Buy 2, Get 1 Free!",
-      image: "/images/img-why-section.png",
-    },
-  ],
-  problems: [
-    "Joint discomfort and stiffness limit your daily activities and quality of life.",
-    "Wear and tear on cartilage leads to pain and long-term joint damage.",
-    "Inflammation makes it harder to stay active and mobile.",
-    "Synthetic medications often come with unwanted side effects.",
-    "Aging reduces natural joint lubrication, increasing stiffness and discomfort."
-  ],
-  solutions: [
-    "Relief of joint pain and stiffness.",
-    "Protect and regenerate cartilage for long-term joint health.",
-    "Reduce inflammation naturally.",
-    "Boost joint lubrication for smooth, pain-free movement.",
-    "Live pain-free.",
-  ],
-  whyUrinaryFormula: [
-    {
-      icon: "/icons/Vector.svg",
-      title: "Relieves Joint Discomfort and Stiffness",
-      description: "",
-    },
-    {
-      icon: "/icons/Group2.svg",
-      title: "Supports Natural Pain Relief",
-      description: "support_blader",
-    },
-    {
-      icon: "/icons/Group.svg",
-      title: "Promotes Flexibility and Active Living",
-      description:
-        "Designed to support long-term joint health, ArthroFlex 365 reduces stiffness and discomfort, empowering you to stay active and condent in both social and physical settings.",
-    },
-  ],
-} as const;
+import type { Category } from "./types";
+
+const categories: Category[] = [
+  {
+    categoryName: "Cialis",
+    products: [
+      {
+        name: "Trail Package",
+        images: ["/images/cialis.png"],
+        description: "Cialis is used for ED treatment.",
+        trialPackage: {
+          tablets: 10,
+          instantSavings: 30,
+          pricePerMonth: 50,
+          regularPrice: 80,
+        },
+        additionalInfo: {
+          doctorVisit: { price: 59, isFree: true },
+          shipping: { price: 10, isFree: true },
+          total: 50,
+          subscription: "Modify, skip or cancel anytime",
+          guarantee: "90-day money-back guarantee",
+        },
+      },
+      {
+        name: "Buy 2 Months - Get 1 Free",
+        images: ["/images/cialis.png"],
+        description: "Get 30 tablets with instant savings of $140.",
+        trialPackage: {
+          tablets: 30,
+          instantSavings: 140,
+          pricePerMonth: 100,
+          regularPrice: 240,
+        },
+        additionalInfo: {
+          doctorVisit: { price: 59, isFree: true },
+          shipping: { price: 10, isFree: true },
+          total: 100,
+          billingInfo: "Bills every 2 months",
+          subscription: "Modify, skip or cancel anytime",
+          lifetimeDiscount: "LIFETIME Discount",
+          guarantee: "90-day money-back guarantee",
+        },
+      },
+      {
+        name: "Buy 3 Months - Get 2 Free",
+        images: ["/images/cialis.png"],
+        description: "Get 50 tablets with instant savings of $350.",
+        trialPackage: {
+          tablets: 50,
+          instantSavings: 350,
+          pricePerMonth: 150,
+          regularPrice: 400,
+        },
+        additionalInfo: {
+          doctorVisit: { price: 59, isFree: true },
+          shipping: { price: 10, isFree: true },
+          total: 150,
+          billingInfo: "Bills every 3 months",
+          subscription: "Modify, skip or cancel anytime",
+          lifetimeDiscount: "LIFETIME Discount",
+          guarantee: "90-day money-back guarantee",
+        },
+      }
+    ],
+  },
+  {
+    categoryName: "Viagra",
+    products: [
+      {
+        name: "Trail Package",
+        images: ["/images/viagra.jpg"],
+        description: "Viagra helps with ED issues.",
+        trialPackage: {
+          tablets: 10,
+          instantSavings: 30,
+          pricePerMonth: 50,
+          regularPrice: 80,
+        },
+        additionalInfo: {
+          doctorVisit: { price: 59, isFree: true },
+          shipping: { price: 10, isFree: true },
+          total: 50,
+          subscription: "Modify, skip or cancel anytime",
+          guarantee: "90-day money-back guarantee",
+        },
+      },
+      {
+        name: "Buy 2 Months - Get 1 Free",
+        images: ["/images/viagra.jpg"],
+        description: "Get 30 tablets with instant savings of $140.",
+        trialPackage: {
+          tablets: 30,
+          instantSavings: 140,
+          pricePerMonth: 100,
+          regularPrice: 240,
+        },
+        additionalInfo: {
+          doctorVisit: { price: 59, isFree: true },
+          shipping: { price: 10, isFree: true },
+          total: 100,
+          billingInfo: "Bills every 2 months",
+          subscription: "Modify, skip or cancel anytime",
+          lifetimeDiscount: "LIFETIME Discount",
+          guarantee: "90-day money-back guarantee",
+        },
+      },
+      {
+        name: "Buy 3 Months - Get 2 Free",
+        images: ["/images/viagra.jpg"],
+        description: "Get 50 tablets with instant savings of $350.",
+        trialPackage: {
+          tablets: 50,
+          instantSavings: 350,
+          pricePerMonth: 150,
+          regularPrice: 400,
+        },
+        additionalInfo: {
+          doctorVisit: { price: 59, isFree: true },
+          shipping: { price: 10, isFree: true },
+          total: 150,
+          billingInfo: "Bills every 3 months",
+          subscription: "Modify, skip or cancel anytime",
+          lifetimeDiscount: "LIFETIME Discount",
+          guarantee: "90-day money-back guarantee",
+        },
+      }
+    ],
+  },
+];
+
+export default categories;

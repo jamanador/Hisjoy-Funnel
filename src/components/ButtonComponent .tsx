@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -24,8 +25,11 @@ const ButtonComponent = () => {
   return (
     <div className="flex flex-col gap-4 p-6 max-w-xl mx-auto">
       {buttons.map((btn, index) => (
-        <button
+        <motion.button
           key={index}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.2, duration: 0.5, ease: "easeOut" }}
           className={`w-full py-3 px-4 text-white text-lg font-semibold rounded-md transition-all duration-200 ${
             active === index.toString() ? "bg-blue-900" : ""
           }`}
@@ -35,7 +39,7 @@ const ButtonComponent = () => {
           onClick={() => handleClick(btn.route, index)}
         >
           {btn.text}
-        </button>
+        </motion.button>
       ))}
     </div>
   );

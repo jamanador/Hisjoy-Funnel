@@ -44,7 +44,7 @@ export function CustomerReviews() {
       const scrollPosition = window.scrollY + window.innerHeight;
       const section = document.getElementById("reviews-section");
 
-      if (section && scrollPosition > section.offsetTop + 100) {
+      if (section && scrollPosition > section.offsetTop + 600) {
         setVisibleReviews((prev) =>
           prev < reviews.length ? prev + 1 : prev
         );

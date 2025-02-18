@@ -30,9 +30,9 @@ const WhiteLabelMDForm = () => {
       {!showForm ? (
         <button
           onClick={() => setShowForm(true)}
-          className="px-6 py-3 text-white bg-blue-500 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300"
+          className="bg-brand-maroon hover:bg-brand-secondary text-white font-semibold py-3 px-6 rounded-full w-10/12 text-lg shadow-md transition-all mt-12 mb-4"
         >
-          Continue Questions
+          Continue Questions  »
         </button>
       ) : (
         <iframe

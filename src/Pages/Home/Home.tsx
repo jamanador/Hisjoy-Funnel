@@ -14,7 +14,7 @@ import "../../styles/index.css";
 export default function Home() {
   return (
     <div>
-      <MarqueeBanner text={"TODAY ONLY: Sign up and get up to 2 Months FREE (a $128 value)!\nwith Speedy, Free shipping"}/>
+      <MarqueeBanner text={"Today Only:  Get 2 MONTHS FREE\nWith Speedy, Free Shipping (a $128 value)"} />
       <div className="max-w-xl mx-auto">
         <Benefits />
         <Advertisement />

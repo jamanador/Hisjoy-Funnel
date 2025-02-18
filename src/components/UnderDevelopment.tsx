@@ -15,7 +15,7 @@ const UnderDevelopment = () => {
     return (
         <div className="text-center">
             <div className="max-w-xl mx-auto">
-                <div className="bg-gray-50 border border-gray-200 text-black py-0 rounded my-14 text-center">
+                <div className="bg-gray-50 border border-gray-200 text-black py-0 rounded text-center">
                     {/* Added Image Here */}
                     <img
                         src="/images/Underdevelopment.avif"
