@@ -2,37 +2,37 @@ import { Category } from "../config/types";
 
 export const ProductCard: React.FC<{ product: Category['products'][0] }> = ({ product }) => {
     return (
-        <div className="rounded overflow-hidden bg-white p-4 mb-4 border border-blue-50">
+        <div className="rounded overflow-hidden shadow-sm bg-white mb-7 border border-blue-50">
             <div className="text-center mb-4">
                 <img className="w-full mx-auto" src={product.images[0]} alt={product.name} />
             </div>
             <div className="text-center mb-4">
-                <span className="text-green-500 font-semibold">Instant savings: ${product.trialPackage.instantSavings}</span>
+                <h2 className="text-2xl font-bold mt-5">{product.name}</h2>
+                <span className="text-green-500 font-semibold italic text-sm">Instant savings: ${product.trialPackage.instantSavings}</span>
             </div>
             <div className="text-center mb-4">
-                <span className="text-4xl font-bold">${product.trialPackage.pricePerMonth}</span>
-                <span className="text-lg text-gray-500 line-through ml-2">${product.trialPackage.regularPrice}</span>
-                <p className="text-sm text-gray-600">Per bottle</p>
+                <span className="text-4xl font-bold animate-pulse">${product.trialPackage.pricePerMonth}</span><br />
+                <span className="font-bold text-black">{product.trialPackage.tablets} Tablets</span>
+                <p className="text-lg text-gray-500 font-semibold"> Regularly <span className="line-through text-red-400 font-semibold">${product.trialPackage.regularPrice}</span></p>
             </div>
             <div className="flex flex-col items-center mb-4">
-                <label className="inline-flex items-center mb-2">
-                    <input type="radio" className="form-radio h-5 w-5 text-blue-600" name="purchaseOption" defaultChecked />
-                    <span className="ml-2 text-gray-700">Subscribe & Save 20% - ${product.trialPackage.pricePerMonth} <span className="line-through text-gray-500">${product.trialPackage.regularPrice}</span></span>
-                </label>
-                <span className="text-gray-500 text-sm">Delivery every month</span>
-                <label className="inline-flex items-center mt-2">
-                    <input type="radio" className="form-radio h-5 w-5 text-blue-600" name="purchaseOption" />
-                    <span className="ml-2 text-gray-700">One-time Purchase - ${product.trialPackage.regularPrice}</span>
-                </label>
+                <p className="text-gray-700 text-base font-semibold">
+                    Doctor visit - ${product.additionalInfo.doctorVisit.price} - {product.additionalInfo.doctorVisit.isFree ? 'Free' : ''}
+                </p>
+                <p className="text-gray-700 text-base font-semibold">
+                    Shipping - ${product.additionalInfo.shipping.price} - {product.additionalInfo.shipping.isFree ? 'Free' : ''}
+                </p>
+                <p className="text-gray-700 text-base font-semibold">Total: ${product.additionalInfo.total}</p>
             </div>
-            <div className="text-center">
-                <button className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded w-full">
+            <div className="text-center lg:mx-4 mx-2">
+                <button className="bg-brand-maroon hover:bg-brand-secondary text-white font-bold py-2 px-4 rounded w-full
+                focus:outline-none focus:shadow-outline" onClick={() => alert("Product added to cart!")}>
                     Add to Cart
                 </button>
             </div>
-            <div className="text-center mt-2 text-sm text-gray-600">
-                <p>Total: ${product.trialPackage.pricePerMonth} + FREE Shipping</p>
-                <p>90-Day Money Back Guarantee</p>
+            <div className="text-center mt-2 mb-4 text-sm text-gray-900">
+                <p className="font-semibold">Total: ${product.additionalInfo.total} + FREE Shipping</p>
+                <p className="italic font-medium">{product.additionalInfo.guarantee}</p>
             </div>
         </div>
     );

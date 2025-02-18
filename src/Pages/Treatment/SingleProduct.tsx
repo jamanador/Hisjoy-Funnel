@@ -52,6 +52,17 @@ const SingleProduct = () => {
                     Get up to 2 Months FREE <br /> (Instead of $10 discount)
                 </h3>
                 <div>
+
+                    {/* Render each product in the selected category */}
+                    <div className="my-10">
+                        <h2 className="text-3xl font-bold mb-8 text-center md:mt-12 mt-10">Choose Your Package
+                        </h2>
+                        <div className="w-10/12 mx-auto">
+                            {selectedCategory.products.map((product, index) => (
+                                <ProductCard key={index} product={product} />
+                            ))}
+                        </div>
+                    </div>
                     <DoctorSlotAlert />
 
                     <div className="flex items-center justify-center mx-2">
@@ -62,17 +73,6 @@ const SingleProduct = () => {
                     </div>
 
                     <PaymentInfo />
-
-                    {/* Render each product in the selected category */}
-                    <div>
-                        <h2 className="text-2xl font-bold mb-4 text-center">Choose Your Pakages</h2>
-                        <div className="w-10/12 mx-auto">
-                            {selectedCategory.products.map((product, index) => (
-                                <ProductCard key={index} product={product} />
-                            ))}
-                        </div>
-                    </div>
-
                     <OffersBadge />
                     <GuaranteeCard />
                     <FastActingCard />
