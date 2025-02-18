@@ -10,7 +10,7 @@ const ProcessingPage = () => {
     const [showStatus, setShowStatus] = useState(false);
 
     // Log the category parameter for debugging
-    console.log("Category parameter:", category);
+    // console.log("Category parameter:", category);
 
     const tasks = useMemo(() => {
         if (!category) return [];
@@ -18,7 +18,7 @@ const ProcessingPage = () => {
             { task: `Searching Doctor Network for ${category}`, status: "No Doctors Available", isError: true },
             { task: "Searching Doctor Network 2", status: "1 Licensed Doctor Available" },
             { task: `Checking Pharmacy for Stock of ${category}`, status: `Generic ${category} Stock Available - Low Stock` },
-            { task: "Checking for Discount Code", status: "Instead of $10 discount" },
+            // { task: "Checking for Discount Code", status: "Instead of $10 discount" },
             { task: "Gathering Shipping Estimate", status: "Qualified for 2 Free months Shipping!" },
         ];
     }, [category]);
@@ -56,7 +56,7 @@ const ProcessingPage = () => {
     const categoryExists = categories.some(
         (cat) => cat.categoryName.toLowerCase() === category.toLowerCase()
     );
-    console.log("Category exists:", categoryExists);
+    // console.log("Category exists:", categoryExists);
     if (!categoryExists) {
         return (
             <div className="flex flex-col items-center p-6">

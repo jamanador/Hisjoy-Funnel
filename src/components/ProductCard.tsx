@@ -2,12 +2,12 @@ import { Category } from "../config/types";
 
 export const ProductCard: React.FC<{ product: Category['products'][0] }> = ({ product }) => {
     return (
-        <div className="rounded overflow-hidden shadow-sm bg-white mb-7 border border-blue-50">
+        <div className="rounded overflow-hidden shadow-sm bg-white mb-7 border border-blue-50 hover:border-blue-100 transition-all duration-1000 hover:cursor-pointer mx-4 md:mx-0">
             <div className="text-center mb-4">
                 <img className="w-full mx-auto" src={product.images[0]} alt={product.name} />
             </div>
             <div className="text-center mb-4">
-                <h2 className="text-2xl font-bold mt-5">{product.name}</h2>
+                <h2 className="text-2xl font-extrabold mt-5">{product.name}</h2>
                 <span className="text-green-500 font-semibold italic text-sm">Instant savings: ${product.trialPackage.instantSavings}</span>
             </div>
             <div className="text-center mb-4">
@@ -17,16 +17,16 @@ export const ProductCard: React.FC<{ product: Category['products'][0] }> = ({ pr
             </div>
             <div className="flex flex-col items-center mb-4">
                 <p className="text-gray-700 text-base font-semibold">
-                    Doctor visit - ${product.additionalInfo.doctorVisit.price} - {product.additionalInfo.doctorVisit.isFree ? 'Free' : ''}
+                    Doctor visit - <span className="line-through">${product.additionalInfo.doctorVisit.price}</span> - {product.additionalInfo.doctorVisit.isFree ? 'Free' : ''}
                 </p>
                 <p className="text-gray-700 text-base font-semibold">
-                    Shipping - ${product.additionalInfo.shipping.price} - {product.additionalInfo.shipping.isFree ? 'Free' : ''}
+                    Shipping - <span className="line-through">${product.additionalInfo.shipping.price}</span> - {product.additionalInfo.shipping.isFree ? 'Free' : ''}
                 </p>
                 <p className="text-gray-700 text-base font-semibold">Total: ${product.additionalInfo.total}</p>
             </div>
             <div className="text-center lg:mx-4 mx-2">
                 <button className="bg-brand-maroon hover:bg-brand-secondary text-white font-bold py-2 px-4 rounded w-full
-                focus:outline-none focus:shadow-outline" onClick={() => alert("Product added to cart!")}>
+                focus:outline-none focus:shadow-outline cursor-pointer" onClick={() => alert("Product added to cart!")}>
                     Add to Cart
                 </button>
             </div>

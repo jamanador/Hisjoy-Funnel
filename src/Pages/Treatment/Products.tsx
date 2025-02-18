@@ -19,9 +19,9 @@ const ProductsItem = () => {
     }, [filteredCategories.length]);
 
     return (
-        <div className="flex flex-col items-center justify-center w-full">
+        <div className="flex flex-col items-center justify-center w-full my-8">
             <h1 className="text-black font-bold text-center text-2xl md:text-4xl mt-8 mb-6">
-                Which Treatment <br /> Would You Prefer?
+                Which Treatment <br /> <span className="text-2xl">Would You Prefer?</span>
             </h1>
             <div className="w-full max-w-6xl grid grid-cols-2 gap-6">
                 {filteredCategories.map((category, index) => (
