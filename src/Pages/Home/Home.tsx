@@ -1,6 +1,6 @@
 import Advertisement from "../../components/Advertisement";
 import { Benefits } from "../../components/Benefits";
-import { CustomerReviews } from "../../components/CustomerRivews";
+import { Reviews } from "../../components/customer-reviews";
 import DeliveryCard from "../../components/DeliveryCard";
 import FastActingCard from "../../components/FastActingCard";
 import GuaranteeCard from "../../components/GuaranteeCard";
@@ -22,7 +22,7 @@ export default function Home() {
         <SuccessCard />
         <FastActingCard />
         <DeliveryCard />
-        <CustomerReviews />
+        <Reviews/>
         <OffersBadge />
         <GuaranteeCard />
         <SecurityInfoCard />

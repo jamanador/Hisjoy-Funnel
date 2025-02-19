@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { CustomerReviews } from "../../components/CustomerRivews";
+import { Reviews } from "../../components/customer-reviews";
 import DoctorSlotAlert from "../../components/DoctorSlotAlert";
 import EstimatedDelivery from "../../components/EstimatedDelivery";
 import FastActingCard from "../../components/FastActingCard";
@@ -51,7 +51,7 @@ const SingleProduct = () => {
                 {/* <h3 className="text-black font-bold text-center text-2xl lg:leading-[40px] lg:text-3xl animate-fade-in-up">
                     Get up to 2 Months FREE <br /> (Instead of $10 discount)
                 </h3> */}
-                <h1 className="text-black font-bold text-center text-2xl md:text-4xl mt-8 mb-6">
+                <h1 className="text-black font-bold  text-center text-2xl md:text-4xl mt-8 mb-6">
                     Get Up to 2 Months FREE
                 </h1>
                 <div>
@@ -82,7 +82,7 @@ const SingleProduct = () => {
                         <FastActingCard />
                         <SuccessCard />
                         <WhyChooseUs />
-                        <CustomerReviews />
+                        <Reviews />
                         <SecurityInfoCard />
                     </div>
                 </div>
