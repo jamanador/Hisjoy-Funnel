@@ -37,10 +37,10 @@ export default function PricingTable() {
                             </td>
 
                             <td className="py-3 px-4 text-lg font-bold">
-                                <span className="bg-white text-black px-4 py-2 rounded-md">$4</span>
+                                <span className="bg-white text-black px-4 py-2 rounded-md">$3</span>
                             </td>
                             <td className="py-3 px-4 text-lg font-bold">
-                                <span className="bg-white text-black px-4 py-2 rounded-md">$4
+                                <span className="bg-white text-black px-4 py-2 rounded-md">$3
                                 </span>
                             </td>
                         </tr>

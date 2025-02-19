@@ -21,5 +21,6 @@ export type Product = {
 
 export type Category = {
     categoryName: string;
+    categoryImages: string[];
     products: Product[];
 };

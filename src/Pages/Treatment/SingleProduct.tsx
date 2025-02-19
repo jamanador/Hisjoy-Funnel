@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 import { CustomerReviews } from "../../components/CustomerRivews";
 import DoctorSlotAlert from "../../components/DoctorSlotAlert";
+import EstimatedDelivery from "../../components/EstimatedDelivery";
 import FastActingCard from "../../components/FastActingCard";
 import GuaranteeCard from "../../components/GuaranteeCard";
 import { MarqueeBanner } from "../../components/MarqueeBanner";
 import { OffersBadge } from "../../components/offers-badge";
-import PaymentInfo from "../../components/PaymentInfo";
 import { ProductCard } from "../../components/ProductCard";
 import SecurityInfoCard from "../../components/SecurityInfoCard";
 import SuccessCard from "../../components/SuccessCard";
@@ -45,19 +45,19 @@ const SingleProduct = () => {
     }
 
     return (
-        <div>
+        <div className="flex flex-col items-center">
             <MarqueeBanner text="✨- Fantastic News! You Are Eligible -🎈 " />
             <div className="mt-10">
                 {/* <h3 className="text-black font-bold text-center text-2xl lg:leading-[40px] lg:text-3xl animate-fade-in-up">
                     Get up to 2 Months FREE <br /> (Instead of $10 discount)
                 </h3> */}
                 <h1 className="text-black font-bold text-center text-2xl md:text-4xl mt-8 mb-6">
-                    Get up to 2 Months FREE<br /> <span className="text-2xl animate-pulse transition-all duration-1000">(Instead of $10 discount)</span>
+                    Get Up to 2 Months FREE
                 </h1>
                 <div>
 
                     {/* Render each product in the selected category */}
-                    <div className="my-10">
+                    <div className="mt-10 mb-5">
                         <h2 className="text-3xl font-bold mb-8 text-center md:mt-12 mt-10">Choose Your Package
                         </h2>
                         <div className="max-w-6xl grid grid-cols-1 md:grid-cols-3 md:gap-x-2 lg:gap-x-4 mx-auto gap-y-3">
@@ -66,7 +66,8 @@ const SingleProduct = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="max-w-xl mx-auto">
+                    <EstimatedDelivery/>
+                    <div className="max-w-xl mx-auto md:mt-12 mt-8">
                         <DoctorSlotAlert />
 
                         <div className="flex items-center justify-center mx-2">
@@ -76,7 +77,6 @@ const SingleProduct = () => {
                             </div>
                         </div>
 
-                        <PaymentInfo />
                         <OffersBadge />
                         <GuaranteeCard />
                         <FastActingCard />

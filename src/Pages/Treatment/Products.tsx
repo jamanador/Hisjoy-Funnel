@@ -32,8 +32,8 @@ const ProductsItem = () => {
                         onClick={() => navigate(`/home/treatment/processing/${category.categoryName.toLowerCase()}`)}
                     >
                         <img
-                            src={category.products[0].images[0]}
-                            alt={category.categoryName}
+                            src={category.categoryImages[0]}
+                            alt={category.categoryImages[0]}
                             className="w-72 md:w-full object-cover rounded-t-xl"
                         />
                         <h3 className="text-xl font-bold py-3">{category.categoryName.toUpperCase()}</h3>
