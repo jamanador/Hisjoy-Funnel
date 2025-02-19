@@ -2,7 +2,7 @@ import { Category } from "../config/types";
 
 export const ProductCard: React.FC<{ product: Category['products'][0] }> = ({ product }) => {
     return (
-        <div className="rounded overflow-hidden shadow-sm bg-white mb-0 border border-blue-50 hover:border-blue-100 transition-all duration-1000 hover:cursor-pointer mx-4 md:mx-0">
+        <div className="rounded-3xl product-card overflow-hidden shadow-sm bg-white mb-0 border border-blue-50 hover:border-blue-100 transition-all duration-1000 hover:cursor-pointer mx-4 md:mx-0">
             <div className="text-center my-4">
                 <img className="w-11/12 h-full mx-auto" src={product.images[0]} alt={product.name} />
             </div>

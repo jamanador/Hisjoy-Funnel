@@ -87,7 +87,7 @@ export function Header() {
     <>
       {/* Top green navbar - shows when scrolling up */}
       <header
-        className={`fixed left-0 right-0 top-0 z-50 md:mb-9 transition-transform duration-300 ${isScrollingDown ? "-translate-y-full" : "translate-y-0"
+        className={`footer_cls fixed left-0 right-0 top-0 z-50 md:mb-9 transition-transform duration-300 ${isScrollingDown ? "-translate-y-full" : "translate-y-0"
           }`}
       >
         <div className="w-full">
@@ -131,7 +131,7 @@ export function Header() {
               <Link to="/home"
                 className="absolute right-1/2 translate-x-1/2 p-1 text-2xl"
               >
-                <h1 className="sr-only">Eco Health Funnel</h1>
+                <h1 className="sr-only">Hisjoy Funnel</h1>
                 <img
                   className="h-full w-[8rem]"
                   src="/images/logo.svg"

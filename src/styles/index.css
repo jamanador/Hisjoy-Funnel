@@ -118,3 +118,19 @@
     background-color: #3b82f6;
   }
 }
+.product-card {
+  transition: transform 0.2s ease-in-out; /* Smooth transition for the hover effect */
+}
+
+.product-card:hover {
+  animation: upDown 2s ease-in-out; /* Apply the animation on hover */
+}
+
+@keyframes upDown {
+  0%, 100% {
+    transform: translateY(0); /* Start and end at the original position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move up by 10px at the halfway point */
+  }
+}

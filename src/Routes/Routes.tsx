@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import Layout from "../Layout/Layout";
 import Home from "../Pages/Home/Home";
 import CategoryPage from "../Pages/Treatment/CategoryPage";
@@ -13,7 +13,7 @@ export default function Routes() {
       path: "/",
       element: <Layout />,
       children: [
-        { path: "/", element: <Home /> },
+        { path: "/", element: <Navigate to="/home" /> },
         { path: "/home", element: <Home /> },
         { path: "/home/treatment", element: <Treatment /> },
         { path: "/home/treatment/:category", element: <CategoryPage /> },

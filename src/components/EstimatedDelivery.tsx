@@ -23,7 +23,7 @@ const EstimatedDelivery: React.FC = () => {
             <img src="/images/delivery.aff68c6.png" alt="USPS" className="w-6 h-6" />
             <p className="font-semibold">
                 <span className="text-black">Est. Delivery:</span>{" "}
-                {formatDate(estimatedDate)} via USPS
+               <span className="text-brand-maroon"> {formatDate(estimatedDate)}</span> via USPS
             </p>
         </div>
     );
