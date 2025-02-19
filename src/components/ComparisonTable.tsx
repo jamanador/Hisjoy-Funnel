@@ -9,7 +9,7 @@ const ComparisonTable: React.FC = () => {
       { label: "Lasts for", values: ["4-5 Hours", "36 Hours"] },
       { label: "Starts Working In", values: ["30 Min", "30-60 Min"] },
     ],
-    price: "$4",
+    price: "$3",
   };
 
   return (

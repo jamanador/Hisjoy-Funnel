@@ -47,18 +47,18 @@ const SingleProduct = () => {
     return (
         <div className="flex flex-col items-center">
             <MarqueeBanner text="✨- Fantastic News! You Are Eligible -🎈 " />
-            <div className="mt-10">
+            <div className="mt-6 sm:mt-10">
                 {/* <h3 className="text-black font-bold text-center text-2xl lg:leading-[40px] lg:text-3xl animate-fade-in-up">
                     Get up to 2 Months FREE <br /> (Instead of $10 discount)
                 </h3> */}
-                <h1 className="text-black font-bold  text-center text-2xl md:text-4xl mt-8 mb-6">
+                <h1 className="text-black font-bold text-center text-3xl md:text-4xl md:mt-8 md:mb-6 mt-4 mb-3">
                     Get Up to 2 Months FREE
                 </h1>
                 <div>
 
                     {/* Render each product in the selected category */}
                     <div className="mt-10 mb-5">
-                        <h2 className="text-3xl font-bold mb-8 text-center md:mt-12 mt-10">Choose Your Package
+                        <h2 className=" text-2xl md:text-3xl font-bold mb-8 text-center md:mt-12 mt-10">Choose Your Package
                         </h2>
                         <div className="max-w-6xl grid grid-cols-1 md:grid-cols-3 md:gap-x-2 lg:gap-x-4 mx-auto gap-y-3">
                             {selectedCategory.products.map((product, index) => (

@@ -184,10 +184,10 @@ export function Header() {
                             </div>
                             <div className="hidden md:block">
                                 <div className="text-sm font-semibold">
-                                    Free Shipping on orders over{" "}
-                                    <span className="text-brand-lime">$50</span>
+                                Ships from US Licensed Pharmacies
+                                    {/* <span className="text-brand-lime">$50</span> */}
                                 </div>
-                                <div className="text-sm text-gray-600">Fast Delivery</div>
+                                <div className="text-sm text-gray-600">FDA Approved Medications</div>
                             </div>
                         </div>
                         <div className="flex items-center gap-4 sm:gap-6">

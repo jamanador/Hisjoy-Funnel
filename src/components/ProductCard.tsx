@@ -1,6 +1,11 @@
+import { IoIosArrowDown } from "react-icons/io";
 import { Category } from "../config/types";
 
 export const ProductCard: React.FC<{ product: Category['products'][0] }> = ({ product }) => {
+
+
+    const deliveryOptions = ["Every Month", "Every 2 Months", "Every 3 Months"]
+
     return (
         <div className="rounded-3xl product-card overflow-hidden shadow-sm bg-white mb-0 border border-blue-50 hover:border-blue-100 transition-all duration-1000 hover:cursor-pointer mx-4 md:mx-0">
             <div className="text-center my-4">
@@ -8,7 +13,7 @@ export const ProductCard: React.FC<{ product: Category['products'][0] }> = ({ pr
             </div>
             <div className="text-center mb-4">
                 <h2 className="text-2xl font-extrabold mt-5">{product.name}</h2>
-                <span className="text-green-500 font-semibold italic text-sm">Instant savings: ${product.trialPackage.instantSavings}</span>
+                <span className="text-green-700 font-semibold italic text-sm">Instant savings: ${product.trialPackage.instantSavings}</span>
             </div>
             <div className="text-center mb-4">
                 <span className="text-4xl font-bold animate-pulse">${product.trialPackage.pricePerMonth}</span><br />
@@ -22,12 +27,24 @@ export const ProductCard: React.FC<{ product: Category['products'][0] }> = ({ pr
                 <p className="text-gray-700 text-base font-semibold">
                     Shipping - <span className="line-through">${product.additionalInfo.shipping.price}</span> - {product.additionalInfo.shipping.isFree ? 'Free' : ''}
                 </p>
-                <p className="text-gray-700 text-base font-semibold">Total: ${product.additionalInfo.total}</p>
+                {/* <p className="text-gray-700 text:xs font-extrabold">Total: ${product.additionalInfo.total}</p> */}
+                <select name="" id="" className="mt-3 mb-1 w-11/12 cursor-pointer rounded border border-gray-200 p-1 focus:border-none focus:0 mx-3 outline-1 text-xs text-center">
+                    {deliveryOptions?.map((option) => (
+                        <option
+                            key={option}
+                            value={option}
+                            className="cursor-pointer mx-6 py-2 text-[14px]"
+                        >
+                            Delivery {option} <IoIosArrowDown className="h-5 w-5 text-blue-700" />
+                        </option>
+                    ))}
+                      
+                </select>
             </div>
             <div className="text-center lg:mx-4 mx-2">
-                <button className="bg-brand-maroon hover:bg-brand-secondary text-white font-bold py-2 px-4 rounded w-full
-                focus:outline-none focus:shadow-outline cursor-pointer" onClick={() => alert("Product added to cart!")}>
-                    Add to Cart
+                <button className="bg-brand-maroon hover:bg-brand-secondary text-white font-bold py-2 px-4 rounded-md w-full
+                focus:outline-none focus:shadow-outline cursor-pointer" onClick={() => alert("After getting link , You will Go to order page.")}>
+                    ADD TO CART
                 </button>
             </div>
             <div className="text-center mt-2 mb-4 text-sm text-gray-900">

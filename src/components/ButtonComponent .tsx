@@ -7,9 +7,9 @@ const ButtonComponent = () => {
   const [active, setActive] = useState<string | null>(null);
 
   const buttons = [
-    { text: "Get erections more easily", bg: "#21bd00", route: "/home/treatment" },
-    { text: "Get firmer erections", bg: "#6fb1c8", route: "/home/treatment" },
-    { text: "Maintain erections longer", bg: "#6fb1c8", route: "/home/treatment" },
+    { text: "Get Erections More Easily", bg: "#21bd00", route: "/home/treatment" },
+    { text: "Get Firmer erections", bg: "#6fb1c8", route: "/home/treatment" },
+    { text: "Get My 2 Free Months", bg: "#6fb1c8", route: "/home/treatment" },
     { text: "All of the above", bg: "#6fb1c8", route: "/home/treatment" },
   ];
 
@@ -38,7 +38,7 @@ const ButtonComponent = () => {
           }}
           onClick={() => handleClick(btn.route, index)}
         >
-          {btn.text}
+          {btn.text.toUpperCase()}
         </motion.button>
       ))}
     </div>

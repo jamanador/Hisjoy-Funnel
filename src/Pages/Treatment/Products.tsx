@@ -36,7 +36,7 @@ const ProductsItem = () => {
                             alt={category.categoryImages[0]}
                             className="w-72 md:w-full object-cover rounded-t-xl"
                         />
-                        <h3 className="text-xl font-bold py-3">{category.categoryName.toUpperCase()}</h3>
+                        <h3 className="text-xl font-bold py-3">CLICK HERE</h3>
                     </div>
                 ))}
             </div>
