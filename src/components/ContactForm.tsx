@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import toast from 'react-hot-toast';
 
 interface ContactFormProps {
     onContinue: () => void;
@@ -7,25 +8,56 @@ interface ContactFormProps {
 const ContactForm: React.FC<ContactFormProps> = ({ onContinue }) => {
     const [fullName, setFullName] = useState('');
     const [lastname, setlastname] = useState('');
-
     const [email, setEmail] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
-    const [agreeToTerms, setAgreeToTerms] = useState(true); // State for the checkbox
+    const [agreeToTerms, setAgreeToTerms] = useState(true);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Handle form submission logic here
-        console.log('Form submitted:', { fullName, email, phoneNumber, agreeToTerms });
-        onContinue(); // Call the continue handler
+
+        // Form data to be submitted
+        const formData = {
+            fullName,
+            lastname,
+            email,
+            phoneNumber,
+            agreeToTerms
+        };
+
+        // Save form data to local storage
+        localStorage.setItem('contactFormData', JSON.stringify(formData));
+
+        try {
+            // Construct the URL with query parameters
+            const url = new URL('https://api.whitelabelmd.com/webhook/partials/110/');
+            url.searchParams.append('phone', phoneNumber);
+            url.searchParams.append('firstname', fullName);
+            url.searchParams.append('lastname', lastname);
+            url.searchParams.append('email', email);
+            url.searchParams.append('contactOptin', agreeToTerms ? '1' : '0');
+            // Add any other necessary parameters here
+
+            // Submit data to the webhook
+            const response = await fetch(url.toString(), {
+                method: 'POST',
+            });
+
+            if (response.ok) {
+                console.log('Form submitted successfully');
+                toast.success("Thank You For the Submit the Info, You'll Get Follow Up Message")
+                onContinue(); // Call the continue handler
+            } else {
+                console.error('Form submission failed');
+            }
+        } catch (error) {
+            console.error('Error submitting form:', error);
+        }
     };
 
     return (
         <div className="flex flex-col items-center justify-center">
             <h3 className='font-bold text-center mt-16 mb-0 text-2xl'>Please Provide Your Info To <br/> <span className='text-lg'>Receive Your 2 Free Months</span></h3>
-            <form
-                onSubmit={handleSubmit}
-                className="w-full p-8 rounded-lg"
-            >
+            <form onSubmit={handleSubmit} className="w-full p-8 rounded-lg">
                 <div className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2">
                         What is your full name?

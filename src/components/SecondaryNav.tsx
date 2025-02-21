@@ -74,7 +74,8 @@ const SecondaryNavbar: React.FC<NavbarProps> = ({ isScrollingDown }) => {
                                     },
                                 }}
                             >
-                                <span className="text-[14px] font-bold"> Get Upto Two Months Free{" "}</span>
+                                <span className="text-[14px] font-bold hidden md:block"> Get Upto Two Months Free{" "}</span>
+                                <span className="text-[14px] font-bold md:hidden">Add To Cart</span>
                             </motion.button>
                         </Link>
                     </div>
