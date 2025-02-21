@@ -7,6 +7,7 @@ export type Product = {
         instantSavings: number;
         pricePerMonth: number;
         regularPrice: number;
+        regularPerTablet:number;
     };
     additionalInfo: {
         doctorVisit: { price: number; isFree: boolean };
@@ -16,6 +17,8 @@ export type Product = {
         subscription: string;
         lifetimeDiscount?: string; // Optional lifetime discount
         guarantee: string;
+        productlink:string;
+        category:string;
     };
 };
 

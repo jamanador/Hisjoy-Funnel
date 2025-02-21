@@ -13,7 +13,6 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
-
 const slides = [
     {
         text: "Top Notch Customer Service",
@@ -46,7 +45,6 @@ export function Header() {
     const [isScrollingDown, setIsScrollingDown] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
     const [currentSlide, setCurrentSlide] = useState(0);
-
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
@@ -148,72 +146,7 @@ export function Header() {
             </header>
 
             {/* Secondary navbar - shows when scrolling down */}
-            <nav
-                className={`fixed bottom-0 left-0 right-0 z-40 bg-gray-50 shadow-sm transition-transform duration-300 md:bottom-auto md:top-0 ${isScrollingDown ? "translate-y-0" : "md:-translate-y-full"
-                    }`}
-            >
-                <div className="w-full border-b border-gray-200">
-                    <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-8">
-                        {/* Left Section */}
-                        <div className="flex items-center gap-4">
-
-                            <a
-                                href="#"
-                                className="flex items-center justify-center gap-2 text-xl font-bold md:hidden"
-                            >
-                                <img
-                                    className="h-[35px] sm:h-[52px] w-auto"
-                                    src="/images/twoproduct.png"
-                                    alt="SNAP"
-                                />
-                                <div className="md:text-sm text-xs font-semibold">
-                                    +Free Shipping on
-                                    <br /> orders over{" "}
-                                    <span className="text-brand-lime">$50</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="gap-6 md:flex md:items-center">
-                            <div className="hidden md:block">
-                                <div className="text-sm font-semibold">
-                                    Top Notch Customer Support
-                                </div>
-                                <div className="text-sm text-gray-600">
-                                    90-Day Money Back Guarantee
-                                </div>
-                            </div>
-                            <div className="hidden md:block">
-                                <div className="text-sm font-semibold">
-                                Ships from US Licensed Pharmacies
-                                    {/* <span className="text-brand-lime">$50</span> */}
-                                </div>
-                                <div className="text-sm text-gray-600">FDA Approved Medications</div>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-4 sm:gap-6">
-                            <Link to="/home/treatment">
-                                <motion.button
-                                    className="flex items-center gap-2 rounded-md bg-[#28A745] px-4 py-2 text-xs font-medium text-white shadow-lg transition-colors hover:bg-[#218838] sm:px-6 sm:py-2 sm:text-sm"
-                                    whileHover={{ scale: 1.2 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    animate={{
-                                        scale: [1, 1.05, 1],
-                                        transition: {
-                                            duration: 1.4,
-                                            ease: "easeInOut",
-                                            repeat: Infinity,
-                                            repeatType: "mirror",
-                                        },
-                                    }}
-                                >
-                                    <span className="text-[18px] font-bold">Add To Cart</span>
-                                </motion.button>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-
+         {/* <SecondaryNavbar isScrollingDown={isScrollingDown}/> */}
             {/* Spacer to prevent content from jumping */}
             <div className="h-[calc(1.9rem+3rem)] md:h-[calc(1.2rem+5rem)]"></div>
         </>

@@ -1,55 +1,110 @@
-import { IoIosArrowDown } from "react-icons/io";
-import { Category } from "../config/types";
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { Category } from '../config/types';
 
 export const ProductCard: React.FC<{ product: Category['products'][0] }> = ({ product }) => {
+    // const [isModalOpen, setIsModalOpen] = useState(false);
 
+    // const openModal = () => setIsModalOpen(true);
+    // const closeModal = () => setIsModalOpen(false);
 
-    const deliveryOptions = ["Every Month", "Every 2 Months", "Every 3 Months"]
+    const exist = product.additionalInfo.category;
+    const productName = useParams()
 
     return (
-        <div className="rounded-3xl product-card overflow-hidden shadow-sm bg-white mb-0 border border-blue-50 hover:border-blue-100 transition-all duration-1000 hover:cursor-pointer mx-4 md:mx-0">
-            <div className="text-center my-4">
-                <img className="w-11/12 h-full mx-auto" src={product.images[0]} alt={product.name} />
-            </div>
+        <div className="rounded-3xl  product-card overflow-hidden shadow-sm bg-white mb-0 border border-blue-50 hover:border-blue-100 transition-all duration-1000 hover:cursor-pointer mx-4 md:mx-0">
+            {exist && <button className="bg-brand-maroon text-white w-full py-2 font-bold">{product.additionalInfo?.category}</button>}
             <div className="text-center mb-4">
                 <h2 className="text-2xl font-extrabold mt-5">{product.name}</h2>
                 <span className="text-green-700 font-semibold italic text-sm">Instant savings: ${product.trialPackage.instantSavings}</span>
             </div>
+            <div className="text-center my-4">
+                <img className="w-11/12 h-full mx-auto mb-[-15px]" src={product.images[0]} alt={product.name} />
+            </div>
             <div className="text-center mb-4">
-                <span className="text-4xl font-bold animate-pulse">${product.trialPackage.pricePerMonth}</span><br />
-                <span className="font-bold text-black">{product.trialPackage.tablets} Tablets</span>
-                <p className="text-sm text-gray-500 font-semibold">Regularly<span className=" text-red-400 font-semibold mx-1">${product.trialPackage.regularPrice}</span>Per Tablet</p>
+                {/* <span className="text-4xl font-bold animate-pulse mt-[-22px]">${product.trialPackage.tablets} Tablets</span><br /> */}
+                <span className="text-2xl font-bold mt-[-30px]">{product.trialPackage.tablets} Tablets</span>
+                <p className="text-[12px] text-gray-500 font-semibold"><span className="text-brand-maroon font-semibold mx-1">${product.trialPackage.regularPerTablet}</span>Per Tablet</p>
             </div>
-            <div className="flex flex-col items-center mb-4">
-                <p className="text-gray-700 text-base font-semibold">
-                    Doctor visit - <span className="line-through">${product.additionalInfo.doctorVisit.price}</span> - {product.additionalInfo.doctorVisit.isFree ? 'Free' : ''}
+            <div className="flex flex-col mb-4 mx-10 font-sans ">
+              <span className=" border-b">
+              <p className="text-gray-700 text-base font-semibold mb-2 text-center">
+                    Lifetime Discount
                 </p>
-                <p className="text-gray-700 text-base font-semibold">
-                    Shipping - <span className="line-through">${product.additionalInfo.shipping.price}</span> - {product.additionalInfo.shipping.isFree ? 'Free' : ''}
-                </p>
-                {/* <p className="text-gray-700 text:xs font-extrabold">Total: ${product.additionalInfo.total}</p> */}
-                <select name="" id="" className="mt-3 mb-1 w-11/12 cursor-pointer rounded border border-gray-200 p-1 focus:border-none focus:0 mx-3 outline-1 text-xs text-center">
-                    {deliveryOptions?.map((option) => (
-                        <option
-                            key={option}
-                            value={option}
-                            className="cursor-pointer mx-6 py-2 text-[14px]"
-                        >
-                            Delivery {option} <IoIosArrowDown className="h-5 w-5 text-blue-700" />
-                        </option>
-                    ))}
-                      
-                </select>
+              </span>
+                <div className="flex justify-between w-full mt-2">
+                    {/* {productName && <p className="text-gray-700 text-base font-semibold">
+                       Generic <span className="">{productName.category?.toLocaleUpperCase()}</span>
+                    </p>}
+                    <p className="text-gray-700 text-base font-semibold">
+                        ${product.trialPackage.regularPrice}
+                    </p>
+                     */}
+                    <div>
+                    <p className="text-gray-700 text-base font-extrabold">
+                       Generic {productName.category?.toLocaleUpperCase()}®
+                    </p>
+                    <span className="text-[12px] mb-[-20px] pt-0">50-100 MG Tablets</span>
+                    </div>
+                    <p className="text-gray-700 text-base font-semibold">
+                        <span className="line-through mr-4">${product.trialPackage.regularPrice}</span>
+                        <span className="text-brand-secondary">{product.trialPackage.pricePerMonth ? ' 150' : ''}</span>
+                    </p>
+                </div>
+                
+                <div className="flex justify-between w-full">
+                    <p className="text-gray-700 text-base font-semibold">
+                        Online Doctor Visit
+                    </p>
+                    <p className="text-gray-700 text-base font-semibold">
+                        <span className="line-through mr-2">${product.additionalInfo.doctorVisit.price}</span>
+                        <span className="text-brand-secondary">{product.additionalInfo.doctorVisit.isFree ? ' FREE' : ''}</span>
+                    </p>
+                </div>
+                <div className="flex justify-between w-full">
+                    <p className="text-gray-700 text-base font-semibold">
+                        Shipping
+                    </p>
+                    <p className="text-gray-700 text-base font-semibold">
+                        <span className="line-through mr-2">${product.additionalInfo.shipping.price}</span>
+                        <span className="text-brand-secondary">{product.additionalInfo.doctorVisit.isFree ? ' FREE' : ''}</span>
+                    </p>
+                </div>
+                <div className="flex justify-between w-full">
+                    <p className="text-gray-700 text-base font-semibold">
+                        Instant Savings 
+                    </p>
+                    <p className="text-brand-secondary text-base font-semibold">
+                        <span className="">-${product.trialPackage.instantSavings}</span>
+                        {/* <span className="text-brand-secondary"></span> */}
+                    </p>
+                </div>
+                <div className="flex justify-between w-full mt-4 border-t">
+                    <p className="text-gray-700 text-md font-bold mt-2">
+                        TOTAL
+                    </p>
+                    <p className="text-black text-md font-bold mt-2">
+                        ${product.trialPackage.pricePerMonth}
+                    </p>
+                </div>
             </div>
+
             <div className="text-center lg:mx-4 mx-2">
-                <button className="bg-brand-maroon hover:bg-brand-secondary text-white font-bold py-2 px-4 rounded-md w-full
-                focus:outline-none focus:shadow-outline cursor-pointer" onClick={() => alert("After getting link , You will Go to order page.")}>
+                <Link to={`${product.additionalInfo.productlink}`}>  <button
+                    className="bg-brand-maroon hover:bg-brand-secondary text-white font-bold py-2 px-4 rounded-md w-full focus:outline-none focus:shadow-outline cursor-pointer"
+                >
                     ADD TO CART
-                </button>
+                </button></Link>
             </div>
+            {/* <CheckoutModal isOpen={isModalOpen} onClose={closeModal} productLink={product.additionalInfo.productlink} /> */}
+            {/* <div className="text-center mt-2 mb-4 text-sm text-gray-900">
+                <p className="font-extrabold">Total: ${product.trialPackage.pricePerMonth} + FREE Shipping</p>
+                <p className="italic font-semibold text-gray-600">{product.additionalInfo.guarantee}</p>
+            </div> */}
             <div className="text-center mt-2 mb-4 text-sm text-gray-900">
-                <p className="font-semibold">Total: ${product.additionalInfo.total} + FREE Shipping</p>
-                <p className="italic font-medium">{product.additionalInfo.guarantee}</p>
+                <p className="font-semibold">{product.additionalInfo.billingInfo}</p>
+                <p className="italic font-semibold text-black">{product.additionalInfo.subscription} <br /><span>Member login provided after checkout</span></p>
+                <p className="italic font-semibold text-gray-800">{product.additionalInfo.guarantee}</p>
             </div>
         </div>
     );
