@@ -57,11 +57,11 @@ export const ProductCard: React.FC<{ product: Category['products'][0] }> = ({ pr
                 <span className="text-xl font-bold mt-[-80px]">
                     {product.trialPackage.tablets} Tablets
                 </span>
-                <p className="text-[12px] text-gray-800 font-semibold flex justify-center items-center animate-fade-in-up">
-                    <span className="text-brand-maroon font-semibold text-3xl mx-2">
+                <p className="text-[12px] text-gray-800 font-medium flex justify-center items-center animate-fade-in-up">
+                    <span className="text-brand-maroon font-medium text-3xl mr-1">
                         ${product.trialPackage.regularPerTablet}
                     </span>
-                    <span className="text-xs">   Per <br /> Tablet</span>
+                    <span className="text-[11px] leading-none">   Per <br /> Tablet</span>
                 </p>
             </div>
 
@@ -73,8 +73,8 @@ export const ProductCard: React.FC<{ product: Category['products'][0] }> = ({ pr
                 </span>
                 <div className="flex justify-between w-full mt-3">
                     <div className="mb-1">
-                        <p className="text-gray-700 text-base font-extrabold leading-tight">
-                            Generic {productName.category?.toLocaleUpperCase()}<sup>®</sup>
+                        <p className="text-gray-700 text-base font-extrabold leading-none">
+                            Generic {productName.category?.toLocaleUpperCase()}<sup className='font-extrabold text-sm'>®</sup>
                             <br />
                             <span className="text-[13px] font-semibold text-gray-700">
                                 {product.trialPackage.tablets} Tablets,

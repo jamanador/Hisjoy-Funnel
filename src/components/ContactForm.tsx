@@ -100,9 +100,17 @@ const ContactForm: React.FC<ContactFormProps> = ({ onContinue }) => {
     };
 
     return (
-        <div className="flex flex-col items-center justify-center max-w-lg mx-auto animate-fade-in-up">
-            <h3 className='font-bold text-center mt-16 mb-0 text-2xl'>Please Provide Your Info To <br /> <span className='text-lg'>Receive Your 2 Free Months</span></h3>
-            <form onSubmit={handleSubmit} className="w-full py-8 px-3 rounded-lg text-center">
+        <div className="flex flex-col items-center justify-center max-w-lg mx-auto animate-fade-in-up text-center font-Inter">
+            <h1 className="text-2xl md:text-3xl font-bold text-black mt-12">
+                PLEASE PROVIDE YOUR INFO
+            </h1>
+            <p className="mt-0 text-xl font-semibold text-red-500">
+                Get 2 Free Months
+            </p>
+            <p className="mt-1 text-sm text-gray-600">
+                Your information will remain confidential
+            </p>
+            <form onSubmit={handleSubmit} className="w-full py-4  md:py-8 px-3 rounded-lg text-center">
                 <div className="mb-4">
                     <label className="block text-gray-700 text-md font-extrabold mb-2">
                         What is your full name?
@@ -195,14 +203,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ onContinue }) => {
                     )}
                 </div>
                 <div className="flex flex-col items-start">
-                    <div className="flex items-center mb-2">
+                    <div className="flex items-center mb-2 ">
                         <input
                             type="checkbox"
                             checked={agreeToTerms}
                             onChange={(e) => setAgreeToTerms(e.target.checked)}
                             className={`w-4 h-4 border-2 ${agreeToTerms ? 'border-blue-500' : 'border-red-500'} rounded focus:ring-blue-500 focus:ring-1`}
                         />
-                        <label className="ml-2 text-gray-500 text-sm font-medium">
+                        <label className="ml-2 text-gray-500 text-xs md:text-sm font-medium">
                             I agree to the <a href="https://www.hisjoy.com/terms/" target='https://www.hisjoy.com/terms/' className="text-blue-500 hover:underline">Terms</a>, <a href="https://www.hisjoy.com/privacy/" target='https://www.hisjoy.com/privacy/' className="text-blue-500 hover:underline">Privacy Policy</a>, and consent to <a href="https://www.hisjoy.com/contact-us/" target='https://www.hisjoy.com/contact-us/' className="text-blue-500 hover:underline">Telehealth</a>.
                         </label>
                     </div>

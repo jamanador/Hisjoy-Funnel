@@ -37,8 +37,8 @@ const SecondaryNavbar: React.FC<NavbarProps> = ({ isScrollingDown }) => {
                                 alt="SNAP"
                             />
                             <div className="md:text-sm text-xs font-semibold">
-                                Get Upto Two
-                                <br />Months Free{" "}
+                            GET TWO MONTHS 
+                                <br />FREE
                             </div>
                         </a>
                     </div>
@@ -61,26 +61,26 @@ const SecondaryNavbar: React.FC<NavbarProps> = ({ isScrollingDown }) => {
                     <div className="flex items-center gap-4 sm:gap-6">
 
 
-                        {isHomePage && <Link to="/home/treatment">
-                            <motion.button
-                                className="flex items-center gap-2 rounded-md bg-[#28A745] px-4 py-2 text-xs font-medium text-white shadow-lg transition-colors hover:bg-[#218838] sm:px-6 sm:py-2 sm:text-sm"
-                                whileHover={{ scale: 1.2 }}
-                                whileTap={{ scale: 0.95 }}
-                                animate={{
-                                    scale: [1, 1.05, 1],
-                                    transition: {
-                                        duration: 1.4,
-                                        ease: "easeInOut",
-                                        repeat: Infinity,
-                                        repeatType: "mirror",
-                                    },
-                                }}
-                            >
-                                <span className="text-[14px] font-bold">
-                                    Get Offer
-                                </span>
-                            </motion.button>
-                        </Link>}
+                        {isHomePage &&  <Link to="/home/treatment">
+                                <motion.button
+                                    className="flex items-center gap-2 rounded-md bg-[#28A745] px-4 py-2 text-xs font-medium text-white shadow-lg transition-colors hover:bg-[#218838] sm:px-6 sm:py-2 sm:text-sm"
+                                    whileHover={{ scale: 1.2 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    animate={{
+                                        scale: [1, 1.05, 1],
+                                        transition: {
+                                            duration: 1.4,
+                                            ease: "easeInOut",
+                                            repeat: Infinity,
+                                            repeatType: "mirror",
+                                        },
+                                    }}
+                                >
+                                    <span className="text-[14px] font-bold">
+                                        Get Offer
+                                    </span>
+                                </motion.button>
+                            </Link>}
 
                         {isProductPage && <ScrollLink
                             to="productSection"
