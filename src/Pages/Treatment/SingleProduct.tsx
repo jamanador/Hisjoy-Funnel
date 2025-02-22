@@ -57,7 +57,7 @@ const SingleProduct = () => {
                 <div>
 
                     {/* Render each product in the selected category */}
-                    <div className="mt-10 mb-5">
+                    <div className="mt-10 mb-5" id="productSection">
                         <h2 className=" text-2xl md:text-3xl font-bold mb-8 text-center md:mt-12 mt-10">Choose Your Package
                         </h2>
                         <div className="max-w-6xl grid grid-cols-1 md:grid-cols-3 md:gap-x-2 lg:gap-x-4 mx-auto gap-y-3">

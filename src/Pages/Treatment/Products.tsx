@@ -19,7 +19,7 @@ const ProductsItem = () => {
     }, [filteredCategories.length]);
 
     return (
-        <div className="flex flex-col items-center justify-center w-full my-8">
+        <div className="flex flex-col items-center justify-center w-full md:my-8 my-4">
             <h1 className="text-black font-bold text-center text-2xl md:text-4xl mt-8 mb-6">
                 Which Treatment <br /> <span className="text-2xl">Would You Prefer?</span>
             </h1>

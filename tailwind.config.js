@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif',"Open Sans"],
+        montserrat: ['Montserrat', 'sans-serif',"Open Sans","Inter"],
       },
       colors: {
         "neutral-dark": "#333333",

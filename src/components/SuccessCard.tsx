@@ -23,7 +23,7 @@ const SuccessCard = () => {
                     <div className="flex items-center justify-center mb-4">
                         <img src="/images/bnr-img.jpg" alt="Clinically Proven" className="w-full" />
                     </div>
-                    <span className="text-brand-maroon font-bold text-md sm:text-xl md:text-2xl">Clinically Proven</span>
+                    <span className="text-brand-maroon font-bold text-md sm:text-xl md:text-2xl animate-fade-in-up">Clinically Proven</span>
                 </div>
 
                 {/* Success Rate Section */}

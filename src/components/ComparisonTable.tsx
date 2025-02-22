@@ -54,7 +54,11 @@ const ComparisonTable: React.FC = () => {
           </table>
         </div>
       </div>
-      <h3 className="text-center font-medium md:py-4 hover:text-brand-secondary transition-all duration-300 text-black underline hover:transform hover:translate-x-3 hover:font-bold">ACT NOW - Get Up to 2 MONTHS FREE</h3>
+      <h3 className="text-center font-medium md:py-4  text-gray-600">
+        <span className="text-red-700 mr-2">NOTE :</span>ACT NOW GET TWO MONTHS FREE
+      </h3>
+
+
     </div>
   );
 };

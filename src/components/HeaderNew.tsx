@@ -77,7 +77,6 @@ export function Header() {
     const prevSlide = () => {
         setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
     };
-
     return (
         <>
             {/* Top green navbar - shows when scrolling up */}
@@ -146,7 +145,7 @@ export function Header() {
             </header>
 
             {/* Secondary navbar - shows when scrolling down */}
-         {/* <SecondaryNavbar isScrollingDown={isScrollingDown}/> */}
+            {/* <SecondaryNavbar isScrollingDown={isScrollingDown}/> */}
             {/* Spacer to prevent content from jumping */}
             <div className="h-[calc(1.9rem+3rem)] md:h-[calc(1.2rem+5rem)]"></div>
         </>

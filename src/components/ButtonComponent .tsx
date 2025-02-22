@@ -7,10 +7,10 @@ const ButtonComponent = () => {
   const [active, setActive] = useState<string | null>(null);
 
   const buttons = [
-    { text: "Get Erections More Easily", bg: "#21bd00", route: "/home/treatment" },
+    { text: "Get Erections More Easily", bg: "#6fb1c8", route: "/home/treatment" },
     { text: "Get Firmer erections", bg: "#6fb1c8", route: "/home/treatment" },
-    { text: "Get My 2 Free Months", bg: "#6fb1c8", route: "/home/treatment" },
-    { text: "All of the above", bg: "#6fb1c8", route: "/home/treatment" },
+    { text: "Maintain Erections Longer", bg: "#6fb1c8", route: "/home/treatment" },
+    { text: "All of the above", bg: "#21bd00", route: "/home/treatment" },
   ];
 
   const handleClick = (route: string, index: number) => {
@@ -23,7 +23,7 @@ const ButtonComponent = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4 p-6 max-w-xl mx-auto">
+    <div className="flex flex-col gap-4 p-6 max-w-md mx-auto">
       {buttons.map((btn, index) => (
         <motion.button
           key={index}

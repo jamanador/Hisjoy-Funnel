@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 
 // Define the props interface
 interface NavbarProps {
@@ -16,7 +17,6 @@ const SecondaryNavbar: React.FC<NavbarProps> = ({ isScrollingDown }) => {
     if (!isHomePage && !isProductPage) {
         return null; // Don't render the navbar if not on the home or product page
     }
-
 
     return (
         <nav
@@ -59,7 +59,9 @@ const SecondaryNavbar: React.FC<NavbarProps> = ({ isScrollingDown }) => {
                         </div>
                     </div>
                     <div className="flex items-center gap-4 sm:gap-6">
-                        <Link to="/home/treatment">
+
+
+                        {isHomePage && <Link to="/home/treatment">
                             <motion.button
                                 className="flex items-center gap-2 rounded-md bg-[#28A745] px-4 py-2 text-xs font-medium text-white shadow-lg transition-colors hover:bg-[#218838] sm:px-6 sm:py-2 sm:text-sm"
                                 whileHover={{ scale: 1.2 }}
@@ -74,10 +76,38 @@ const SecondaryNavbar: React.FC<NavbarProps> = ({ isScrollingDown }) => {
                                     },
                                 }}
                             >
-                                <span className="text-[14px] font-bold hidden md:block"> Get Upto Two Months Free{" "}</span>
-                                <span className="text-[14px] font-bold md:hidden">Add To Cart</span>
+                                <span className="text-[14px] font-bold">
+                                    Get Offer
+                                </span>
                             </motion.button>
-                        </Link>
+                        </Link>}
+
+                        {isProductPage && <ScrollLink
+                            to="productSection"
+                            smooth={true}
+                            duration={500}
+                            spy={true}
+                            offset={-70}
+                        >
+                            <motion.button
+                                className="flex items-center gap-2 rounded-md bg-[#28A745] px-4 py-2 text-xs font-medium text-white shadow-lg transition-colors hover:bg-[#218838] sm:px-6 sm:py-2 sm:text-sm"
+                                whileHover={{ scale: 1.2 }}
+                                whileTap={{ scale: 0.95 }}
+                                animate={{
+                                    scale: [1, 1.05, 1],
+                                    transition: {
+                                        duration: 1.4,
+                                        ease: "easeInOut",
+                                        repeat: Infinity,
+                                        repeatType: "mirror",
+                                    },
+                                }}
+                            >
+                                <span className="text-[14px] font-bold">
+                                    {isProductPage ? "Select Your Package" : "Get Offer"}
+                                </span>
+                            </motion.button>
+                        </ScrollLink>}
                     </div>
                 </div>
             </div>

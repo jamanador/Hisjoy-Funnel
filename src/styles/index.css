@@ -132,6 +132,22 @@
     transform: translateY(0); /* Start and end at the original position */
   }
   50% {
-    transform: translateY(-10px); /* Move up by 10px at the halfway point */
+    transform: translateY(-30px); /* Move up by 10px at the halfway point */
   }
+}
+.red-line-through {
+  position: relative;
+  color: #4a5568; /* Gray color */
+}
+
+.red-line-through::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  width:100%;
+  background-color: #ec4a4a; /* Red color */
+  transform: translateY(-50%);
 }

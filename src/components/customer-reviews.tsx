@@ -51,6 +51,7 @@ export function Reviews() {
 
   return (
     <section className="relative mx-auto max-w-6xl space-y-2 p-2 text-center lg:p-6 my-6">
+      <div className="mx-2">
       <motion.p
         ref={titleRef}
         initial={{ opacity: 0, y: 50 }}
@@ -103,6 +104,7 @@ export function Reviews() {
           </motion.li>
         ))}
       </ul>
+      </div>
     </section>
   );
 }
