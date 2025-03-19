@@ -17,7 +17,7 @@ export const ProductCard: React.FC<{ product: Category['products'][0] }> = ({ pr
     useEffect(() => {
         // Retrieve form data from local storage
         const savedData = localStorage.getItem('contactFormData');
-        console.log(savedData);
+        // console.log(savedData);
         if (savedData) {
             setFormData(JSON.parse(savedData));
         }
@@ -44,7 +44,7 @@ export const ProductCard: React.FC<{ product: Category['products'][0] }> = ({ pr
     const hundredmg = productName.category === 'viagra'
 
     return (
-        <div className="rounded-3xl product-card overflow-hidden shadow-sm bg-white mb-0 border border-blue-50 hover:border-blue-100 transition-all duration-1000 hover:cursor-pointer mx-4 md:mx-0">
+        <div className="rounded-3xl overflow-hidden shadow-xs bg-white mb-0 border border-gray-100 hover:border-blue-50 transition-all duration-1000 hover:cursor-pointer mx-4 md:mx-0">
             {exist && <button className="bg-brand-maroon text-white w-full py-2 font-bold">{product.additionalInfo?.category}</button>}
             <div className="text-center mb-4">
                 <h2 className="text-2xl font-extrabold mt-5">{product.name}</h2>
@@ -90,7 +90,7 @@ export const ProductCard: React.FC<{ product: Category['products'][0] }> = ({ pr
                             ${product.trialPackage.regularPrice}
                         </span>
                         <span className="text-brand-secondary">
-                            {product.trialPackage.pricePerMonth ? ' 150' : ''}
+                            {product.trialPackage.pricePerMonth}
                         </span>
                     </p>
                 </div>
@@ -144,7 +144,7 @@ export const ProductCard: React.FC<{ product: Category['products'][0] }> = ({ pr
             </div>
             <div className="text-center lg:mx-4 mx-2">
                 <a href={constructUrlWithQueryParams(product.additionalInfo.productlink)}>
-                    <button className="bg-brand-maroon hover:bg-brand-secondary text-white font-bold py-2 px-4 rounded-md w-full focus:outline-none focus:shadow-outline cursor-pointer">
+                    <button className="hover:bg-brand-maroon bg-brand-secondary text-white font-bold py-2 px-4 rounded-md w-full focus:outline-none focus:shadow-outline cursor-pointer">
                         ADD TO CART
                     </button>
                 </a>

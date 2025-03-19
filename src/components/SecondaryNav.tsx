@@ -12,7 +12,7 @@ const SecondaryNavbar: React.FC<NavbarProps> = ({ isScrollingDown }) => {
     const location = useLocation();
     // Check if the current path is the home page or the single product page
     const isHomePage = location.pathname === '/home';
-    const isProductPage = location.pathname.startsWith('/home/treatment');
+    const isProductPage = location.pathname.startsWith('/home/treatment/product');
 
     if (!isHomePage && !isProductPage) {
         return null; // Don't render the navbar if not on the home or product page
@@ -20,10 +20,10 @@ const SecondaryNavbar: React.FC<NavbarProps> = ({ isScrollingDown }) => {
 
     return (
         <nav
-            className={`fixed bottom-0 left-0 right-0 z-40 bg-gray-50 shadow-sm transition-transform duration-300 md:bottom-auto md:top-0 ${isScrollingDown ? "translate-y-0" : "md:-translate-y-full"
+            className={`fixed bottom-0 left-0 right-0 z-50 bg-white transition-all duration-1000 md:bottom-auto md:top-0 ${window.scrollY > 0 && isScrollingDown ? "translate-y-0" : "md:-translate-y-full"
                 }`}
         >
-            <div className="w-full border-b border-gray-200">
+            <div className="w-full border-b border-gray-200 md:py-6">
                 <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-8">
                     {/* Left Section */}
                     <div className="flex items-center gap-4">
@@ -37,7 +37,7 @@ const SecondaryNavbar: React.FC<NavbarProps> = ({ isScrollingDown }) => {
                                 alt="SNAP"
                             />
                             <div className="md:text-sm text-xs font-semibold">
-                            GET TWO MONTHS 
+                                GET TWO MONTHS
                                 <br />FREE
                             </div>
                         </a>
@@ -59,9 +59,8 @@ const SecondaryNavbar: React.FC<NavbarProps> = ({ isScrollingDown }) => {
                         </div>
                     </div>
                     <div className="flex items-center gap-4 sm:gap-6">
-
-
-                        {isHomePage &&  <Link to="/home/treatment">
+                        {isHomePage &&
+                            <Link to="/home/treatment#categorySection">
                                 <motion.button
                                     className="flex items-center gap-2 rounded-md bg-[#28A745] px-4 py-2 text-xs font-medium text-white shadow-lg transition-colors hover:bg-[#218838] sm:px-6 sm:py-2 sm:text-sm"
                                     whileHover={{ scale: 1.2 }}
@@ -82,32 +81,33 @@ const SecondaryNavbar: React.FC<NavbarProps> = ({ isScrollingDown }) => {
                                 </motion.button>
                             </Link>}
 
-                        {isProductPage && <ScrollLink
-                            to="productSection"
-                            smooth={true}
-                            duration={500}
-                            spy={true}
-                            offset={-70}
-                        >
-                            <motion.button
-                                className="flex items-center gap-2 rounded-md bg-[#28A745] px-4 py-2 text-xs font-medium text-white shadow-lg transition-colors hover:bg-[#218838] sm:px-6 sm:py-2 sm:text-sm"
-                                whileHover={{ scale: 1.2 }}
-                                whileTap={{ scale: 0.95 }}
-                                animate={{
-                                    scale: [1, 1.05, 1],
-                                    transition: {
-                                        duration: 1.4,
-                                        ease: "easeInOut",
-                                        repeat: Infinity,
-                                        repeatType: "mirror",
-                                    },
-                                }}
+                        {isProductPage &&
+                            <ScrollLink
+                                to="productSection"
+                                smooth={true}
+                                duration={500}
+                                spy={true}
+                                offset={-140}
                             >
-                                <span className="text-[14px] font-bold">
-                                    {isProductPage ? "Select Your Package" : "Get Offer"}
-                                </span>
-                            </motion.button>
-                        </ScrollLink>}
+                                <motion.button
+                                    className="flex items-center gap-2 rounded-md bg-[#28A745] px-4 py-2 text-xs font-medium text-white shadow-lg transition-colors hover:bg-[#218838] sm:px-6 sm:py-2 sm:text-sm"
+                                    whileHover={{ scale: 1.2 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    animate={{
+                                        scale: [1, 1.05, 1],
+                                        transition: {
+                                            duration: 1.4,
+                                            ease: "easeInOut",
+                                            repeat: Infinity,
+                                            repeatType: "mirror",
+                                        },
+                                    }}
+                                >
+                                    <span className="text-[12px] sm:text-[14px] font-bold">
+                                        {isProductPage ? "Select Your Package" : "Get Offer"}
+                                    </span>
+                                </motion.button>
+                            </ScrollLink>}
                     </div>
                 </div>
             </div>

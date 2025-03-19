@@ -24,12 +24,12 @@ const categories: Category[] = [
           subscription: "Modify, skip or cancel anytime",
           lifetimeDiscount: "LIFETIME Discount",
           guarantee: "90-day money-back guarantee",
-          productlink: "https://beta.hisjoy.com/l/rsk-yzj-c6v",
+          productlink: "https://checkout.hisjoy.com/l/rsk-yzj-c6v",
           category: "Best Value"
         },
       },
       {
-        name: "Trail Package",
+        name: "Trial Package",
         images: ["/images/trailpakage.png"],
         description: "Cialis is used for ED treatment.",
         trialPackage: {
@@ -46,7 +46,7 @@ const categories: Category[] = [
           total: 50,
           subscription: "Modify, skip or cancel anytime",
           guarantee: "90-day money-back guarantee",
-          productlink: "https://checkout.hisjoy.com/l/lxj-mju-lwr",
+          productlink: "https://checkout.hisjoy.com/l/jqj-53n-vei",
           category: "Great Value"
         },
       },
@@ -69,7 +69,7 @@ const categories: Category[] = [
           subscription: "Modify, skip or cancel anytime",
           lifetimeDiscount: "LIFETIME Discount",
           guarantee: "90-day money-back guarantee",
-          productlink: "https://beta.hisjoy.com/l/vof-bpt-o5d",
+          productlink: "https://checkout.hisjoy.com/l/vof-bpt-o5d",
           category: "Most Popular"
         },
       }
@@ -98,12 +98,12 @@ const categories: Category[] = [
           subscription: "Modify, skip or cancel anytime",
           lifetimeDiscount: "LIFETIME Discount",
           guarantee: "90-day money-back guarantee",
-          productlink: "https://beta.hisjoy.com/l/b0f-40r-je8",
+          productlink: "https://checkout.hisjoy.com/l/b0f-40r-je8",
           category: "Best Value"
         },
       },
       {
-        name: "Trail Package",
+        name: "Trial Package",
         images: ["/images/trailpakage-viagra.png"],
         description: "Viagra helps with ED issues.",
         trialPackage: {
@@ -120,7 +120,7 @@ const categories: Category[] = [
           total: 50,
           subscription: "Modify, skip or cancel anytime",
           guarantee: "90-day money-back guarantee",
-          productlink: "https://checkout.hisjoy.com/l/q84-hy2-5rl",
+          productlink: "https://checkout.hisjoy.com/l/pui-pqy-l6j",
           category: "Great Value"
         },
       },
@@ -143,7 +143,7 @@ const categories: Category[] = [
           subscription: "Modify, skip or cancel anytime",
           lifetimeDiscount: "LIFETIME Discount",
           guarantee: "90-day money-back guarantee",
-          productlink: "https://beta.hisjoy.com/l/spa-pcw-d01",
+          productlink: "https://checkout.hisjoy.com/l/spa-pcw-d01",
           category: "Most Popular"
         },
       }

@@ -75,7 +75,7 @@
   /* Center the footer */
   transform: translateX(-50%);
   /* Adjust the positioning */
-  bottom: 0px!important;
+  bottom: 0!important;
 }
 .custom {
   background: linear-gradient(0deg, #6fb1c8 0%, #4a88a6 100%);

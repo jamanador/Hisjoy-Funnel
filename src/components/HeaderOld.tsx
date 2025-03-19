@@ -1,15 +1,15 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import {
-    FaArrowRight,
-    FaCapsules,
-    FaCheckCircle,
-    FaChevronLeft,
-    FaChevronRight,
-    FaHeadset,
-    FaPhoneAlt,
-    FaShippingFast,
-    FaUserMd,
+  FaArrowRight,
+  FaCapsules,
+  FaCheckCircle,
+  FaChevronLeft,
+  FaChevronRight,
+  FaHeadset,
+  FaPhoneAlt,
+  FaShippingFast,
+  FaUserMd,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
@@ -145,6 +145,7 @@ export function Header() {
             </header>
 
             {/* Secondary navbar - shows when scrolling down */}
+            
             {/* <SecondaryNavbar isScrollingDown={isScrollingDown}/> */}
             {/* Spacer to prevent content from jumping */}
             <div className="h-[calc(1.9rem+3rem)] md:h-[calc(1.2rem+5rem)]"></div>

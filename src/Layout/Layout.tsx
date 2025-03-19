@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
-import { Header } from '../components/HeaderNew';
-import NewFooter from '../components/NewFooter';
+import Footer from '../components/Footer';
+import { Header } from '../components/Header';
 import SecondaryNavbar from '../components/SecondaryNav';
 
 export default function Layout() {
@@ -31,7 +31,7 @@ export default function Layout() {
             <Header />
             {isHomeOrProductPage && <SecondaryNavbar isScrollingDown={isScrollingDown} />}
             <Outlet />
-            <NewFooter />
+            <Footer />
         </div>
     );
 }

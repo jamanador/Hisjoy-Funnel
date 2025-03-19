@@ -12,8 +12,6 @@ export function Benefits() {
                     Cialis
                     <span className="relative top-[-12px] text-[18px] font-extrabold">®</span>?
                 </h3>
-
-
                 <ButtonComponent />
             </div>
         </div>

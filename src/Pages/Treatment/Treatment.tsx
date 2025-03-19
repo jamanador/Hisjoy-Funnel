@@ -5,9 +5,9 @@ import ProductsItem from "./Products";
 const Treatment = () => {
 
     return (
-        <div className="max-w-xl mx-auto">
+        <div className="max-w-xl mx-auto" id="categorySection">
             <ProductsItem />
-            <ComparisonTable/>
+            <ComparisonTable />
         </div>
     );
 };

@@ -34,7 +34,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onContinue }) => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-
+        // console.log("first")
         // Check for errors
         const errors = {
             firstname: !firstname,
@@ -74,23 +74,28 @@ const ContactForm: React.FC<ContactFormProps> = ({ onContinue }) => {
         localStorage.setItem('contactFormData', JSON.stringify(formData));
 
         try {
-            // Construct the URL with query parameters
-            const url = new URL('https://api.whitelabelmd.com/webhook/partials/110/');
-            url.searchParams.append('phone', phone);
-            url.searchParams.append('firstname', firstname);
-            url.searchParams.append('lastname', lastname);
-            url.searchParams.append('email', email);
-            url.searchParams.append('discount_code', discountCode); // Append discount code to URL
+            // console.log("Sending Data:", JSON.stringify(formData));
 
-            // Submit data to the webhook
-            const response = await fetch(url.toString(), {
+            const url = 'https://api.whitelabelmd.com/webhook/partials/110/';
+            const response = await fetch(url, {
                 method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData), // Send formData as JSON in the request body
             });
-
+            console.log(response)
             if (response.ok) {
-                onContinue(); // Call the continue handler
+                const responseData = await response.json();
+                console.log(responseData)
+                if (responseData.status === 'OK') {
+                    onContinue(); // Call the continue handler
+                    console.log('Form submitted successfully');
+                } else {
+                    console.error('Form submission failed with status:', responseData.status);
+                }
             } else {
-                console.error('Form submission failed');
+                console.error('Form submission failed with status:', response.status);
             }
         } catch (error) {
             console.error('Error submitting form:', error);
@@ -98,16 +103,15 @@ const ContactForm: React.FC<ContactFormProps> = ({ onContinue }) => {
             setLoading(false);
         }
     };
-
     return (
         <div className="flex flex-col items-center justify-center max-w-lg mx-auto animate-fade-in-up text-center font-Inter">
-            <h1 className="text-2xl md:text-3xl font-bold text-black mt-12">
-                PLEASE PROVIDE YOUR INFO
+            <h1 className="text-md md:text-lg font-bold text-black mt-12">
+                PLEASE PROVIDE YOUR INFORMATION <br /> TO RECEIVE YOUR
             </h1>
-            <p className="mt-0 text-xl font-semibold text-red-500">
-                Get 2 Free Months
+            <p className="mt-0 text-md md:text-lg font-semibold text-red-500">
+                2 FREE MONTHS
             </p>
-            <p className="mt-1 text-sm text-gray-600">
+            <p className="mt-1 text-md text-gray-600">
                 Your information will remain confidential
             </p>
             <form onSubmit={handleSubmit} className="w-full py-4  md:py-8 px-3 rounded-lg text-center">
@@ -203,14 +207,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ onContinue }) => {
                     )}
                 </div>
                 <div className="flex flex-col items-start">
-                    <div className="flex items-center mb-2 ">
+                    <div className="flex items-start md:items-center mb-2 ">
                         <input
                             type="checkbox"
                             checked={agreeToTerms}
                             onChange={(e) => setAgreeToTerms(e.target.checked)}
                             className={`w-4 h-4 border-2 ${agreeToTerms ? 'border-blue-500' : 'border-red-500'} rounded focus:ring-blue-500 focus:ring-1`}
                         />
-                        <label className="ml-2 text-gray-500 text-xs md:text-sm font-medium">
+                        <label className="ml-1 sm:ml-2 text-gray-500 text-xs md:text-sm font-medium">
                             I agree to the <a href="https://www.hisjoy.com/terms/" target='https://www.hisjoy.com/terms/' className="text-blue-500 hover:underline">Terms</a>, <a href="https://www.hisjoy.com/privacy/" target='https://www.hisjoy.com/privacy/' className="text-blue-500 hover:underline">Privacy Policy</a>, and consent to <a href="https://www.hisjoy.com/contact-us/" target='https://www.hisjoy.com/contact-us/' className="text-blue-500 hover:underline">Telehealth</a>.
                         </label>
                     </div>
@@ -223,7 +227,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ onContinue }) => {
                 </div>
                 <button
                     type="submit"
-                    title='Submit The Data To Continue'
                     className={`font-bold py-3 px-4 rounded-xl w-full text-lg mt-3 flex items-center justify-center transition-all duration-300 ${isFormValid ? "bg-brand-maroon hover:bg-brand-secondary text-white" : "bg-gray-600 text-gray-200 cursor-not-allowed"
                         }`}
                 // disabled={!isFormValid || loading}
