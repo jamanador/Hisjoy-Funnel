@@ -1,7 +1,7 @@
-import React from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 import ContactForm from '../../components/ContactForm';
-
 const CredibilityPage: React.FC = () => {
     const navigate = useNavigate();
     const { category } = useParams<{ category: string }>();
@@ -11,10 +11,20 @@ const CredibilityPage: React.FC = () => {
             navigate(`/home/treatment/processing/${category}`);
         }
     };
+    const location = useLocation();
 
+    useEffect(() => {
+        if (location.hash && location.hash === "#categorySection") {
+            scroller.scrollTo("categorySection", {
+                smooth: true,
+                duration: 500,
+                offset: -140, // Adjust if needed
+            });
+        }
+    }, [location.hash]);
     return (
         <div className="max-w-xl mx-auto flex flex-col items-center justify-center md:py-4">
-            <div className="max-w-md text-center bg-blue-50 md:mt-12 p-8 rounded-xl">
+            <div className="max-w-md text-center bg-blue-50 md:mt-12 p-8 rounded-xl" id="categorySection">
                 <h1 className="text-lg md:text-2xl font-extrabold text-black mb-4">
                     Great Choice!<br /> Your Selection is Clinically <br />Proven to Improve Erections!
                 </h1>

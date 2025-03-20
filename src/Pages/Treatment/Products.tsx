@@ -42,7 +42,7 @@ const ProductsItem = () => {
                             key={category.categoryName}
                             className={`cursor-pointer bg-white rounded-xl hover:bg-brand-maroon hover:text-white transition-all duration-300 flex flex-col items-center border-2 ${pulseIndex === index ? "animate-pulse border-brand-primary" : "border-gray-200"
                                 }`}
-                            onClick={() => navigate(`/home/treatment/credibility/${category.categoryName.toLowerCase()}`)}
+                            onClick={() => navigate(`/home/treatment/credibility/${category.categoryName.toLowerCase()}#categorySection`)}
                         >
                             <img
                                 src={category.categoryImages[0]}
