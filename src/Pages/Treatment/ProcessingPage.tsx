@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { scroller } from "react-scroll";
 import { MarqueeBanner } from "../../components/MarqueeBanner";
 import categories from "../../config"; // Ensure this path is correct
 
@@ -8,6 +9,21 @@ const ProcessingPage = () => {
     const navigate = useNavigate();
     const [currentTask, setCurrentTask] = useState(0);
     const [showStatus, setShowStatus] = useState(false);
+
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash && location.hash === "#checking") {
+            scroller.scrollTo("checking", {
+                smooth: true,
+                duration: 500,
+                offset: -140, // Adjust if needed
+            });
+        }
+    }, [location.hash]);
+
+
+
 
     const tasks = useMemo(() => {
         if (!category) return [];
@@ -64,7 +80,7 @@ const ProcessingPage = () => {
     return (
         <div>
             <MarqueeBanner text="Checking Eligibility" className="bg-red-400 text-white animate-pulse" />
-            <div className="flex flex-col items-center p-6 justify-items-center md:mt-10 lg:mt-15" id="targetSection">
+            <div className="flex flex-col items-center p-6 justify-items-center md:mt-10 lg:mt-15" id="checking">
                 <h1 className="text-2xl font-bold mb-4">Checking Doctor & Stock Availability</h1>
                 <div className="w-full max-w-lg bg-gray-200 rounded-full h-5 overflow-hidden mb-6">
                     <div className="bg-green-500 h-full transition-all duration-500 ease-in-out" style={{ width: `${progress}%` }}></div>

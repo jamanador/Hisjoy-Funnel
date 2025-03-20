@@ -8,14 +8,14 @@ const CredibilityPage: React.FC = () => {
 
     const handleContinue = () => {
         if (category) {
-            navigate(`/home/treatment/processing/${category}`);
+            navigate(`/home/treatment/processing/${category}#checking`);
         }
     };
     const location = useLocation();
 
     useEffect(() => {
-        if (location.hash && location.hash === "#categorySection") {
-            scroller.scrollTo("categorySection", {
+        if (location.hash && location.hash === "#greatchoice") {
+            scroller.scrollTo("greatchoice", {
                 smooth: true,
                 duration: 500,
                 offset: -140, // Adjust if needed
@@ -24,7 +24,7 @@ const CredibilityPage: React.FC = () => {
     }, [location.hash]);
     return (
         <div className="max-w-xl mx-auto flex flex-col items-center justify-center md:py-4">
-            <div className="max-w-md text-center bg-blue-50 md:mt-12 p-8 rounded-xl" id="categorySection">
+            <div className="max-w-md text-center bg-blue-50 md:mt-12 p-8 rounded-xl" id="greatchoice">
                 <h1 className="text-lg md:text-2xl font-extrabold text-black mb-4">
                     Great Choice!<br /> Your Selection is Clinically <br />Proven to Improve Erections!
                 </h1>
