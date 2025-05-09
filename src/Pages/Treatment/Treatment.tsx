@@ -5,7 +5,7 @@ import ProductsItem from "./Products";
 const Treatment = () => {
 
     return (
-        <div className="max-w-xl mx-auto" id="categorySection">
+        <div className="max-w-xl mx-auto">
             <ProductsItem />
             <ComparisonTable />
         </div>

@@ -4,35 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
-@layer utilities {
-  .grid-containerxl {
-    --padding-inline: 1rem;
-    --container-max-width: 85rem;
-    --breakout-max-width: 88rem;
-    --breakout-size: calc((var(--breakout-max-width) - var(--container-max-width)) / 2);
-
-    display: grid;
-    grid-template-columns:
-      [full-width-start] minmax(var(--padding-inline), 1fr) [breakout-start] minmax(0, var(--breakout-size)) [content-start] min(100% - (var(--padding-inline) * 2),
-        var(--container-max-width)) [content-end] minmax(0, var(--breakout-size)) [breakout-end] minmax(var(--padding-inline),
-        1fr) [full-width-end];
-  }
-
-  .grid-containerxl> :not(.full-width, .breakout) {
-    grid-column: content;
-  }
-
-  .grid-containerxl>.full-width {
-    grid-column: full-width;
-  }
-
-  .grid-containerxl>.breakout {
-    grid-column: breakout;
-  }
-
+/* Custom Css add for the based on need. */
   .text-maroon {
     @apply text-[#B11E54];
   }
@@ -64,17 +36,12 @@
   .color-green {
     @apply bg-[#6fb1c8];
   }
-}
 
 .footer_cls {
   width: 100vw;
-  /* Ensures the footer takes the full viewport width */
   position: relative;
-  /* Necessary for positioning adjustments */
   left: 50%;
-  /* Center the footer */
   transform: translateX(-50%);
-  /* Adjust the positioning */
   bottom: 0!important;
 }
 .custom {
@@ -82,17 +49,17 @@
 }
 .custom_btn{
   .button {
-    background-color: #28a745; /* A darker green */
-    color: white;              /* Text color */
-    border: none;              /* Remove border */
-    padding: 10px 20px;        /* Padding for the button */
-    border-radius: 5px;        /* Rounded corners */
-    font-size: 16px;           /* Font size */
-    cursor: pointer;           /* Pointer cursor on hover */
+    background-color: #28a745; 
+    color: white;             
+    border: none;            
+    padding: 10px 20px;       
+    border-radius: 5px;       
+    font-size: 16px;           
+    cursor: pointer;           
   }
   
   .button:hover {
-    background-color: #218838; /* Darker shade for hover effect */
+    background-color: #218838; 
   }
   
 }
@@ -120,24 +87,23 @@
   }
 }
 .product-card {
-  transition: transform 0.2s ease-in-out; /* Smooth transition for the hover effect */
+  transition: transform 0.2s ease-in-out; 
 }
 
 .product-card:hover {
-  animation: upDown 2s ease-in-out; /* Apply the animation on hover */
+  animation: upDown 2s ease-in-out; 
 }
 
 @keyframes upDown {
   0%, 100% {
-    transform: translateY(0); /* Start and end at the original position */
-  }
+    transform: translateY(0); }
   50% {
-    transform: translateY(-30px); /* Move up by 10px at the halfway point */
+    transform: translateY(-30px); 
   }
 }
 .red-line-through {
   position: relative;
-  color: #4a5568; /* Gray color */
+  color: #4a5568;
 }
 
 .red-line-through::after {
@@ -148,6 +114,6 @@
   right: 0;
   height: 1px;
   width:100%;
-  background-color: #ec4a4a; /* Red color */
+  background-color: #ec4a4a; 
   transform: translateY(-50%);
 }

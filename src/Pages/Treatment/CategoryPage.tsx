@@ -4,7 +4,7 @@ import categories from "../../config";
 const CategoryPage = () => {
   const { category } = useParams<{ category: string }>();
 
-  // Find the category object that matches the selected category (case-insensitive)
+  // Find the category object that matches the selected category (with finding case-insensitive)
   const selectedCategory = categories.find(
     (cat) => cat.categoryName.toLowerCase() === category?.toLowerCase()
   );

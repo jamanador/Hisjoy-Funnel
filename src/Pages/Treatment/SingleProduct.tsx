@@ -32,9 +32,6 @@ const SingleProduct = () => {
         (cat) => cat.categoryName.toLowerCase() === category.toLowerCase()
     );
 
-    // Log the selected category for debugging
-    // console.log("Selected Category:", selectedCategory);
-
     if (!selectedCategory) {
         return (
             <div className="flex flex-col items-center p-6">
@@ -48,9 +45,6 @@ const SingleProduct = () => {
         <div className="flex flex-col items-center">
             <MarqueeBanner text="✨- Fantastic News! You Are Eligible -🎈 " />
             <div className="mt-6 sm:mt-10">
-                {/* <h3 className="text-black font-bold text-center text-2xl lg:leading-[40px] lg:text-3xl animate-fade-in-up">
-                    Get up to 2 Months FREE <br /> (Instead of $10 discount)
-                </h3> */}
                 <h1 className="text-black font-bold text-center text-3xl md:text-4xl md:mt-8 md:mb-6 mt-4 mb-3">
                     Get Up to 2 Months FREE
                 </h1>
@@ -66,7 +60,7 @@ const SingleProduct = () => {
                             ))}
                         </div>
                     </div>
-                    <EstimatedDelivery/>
+                    <EstimatedDelivery />
                     <div className="max-w-xl mx-auto md:mt-12 mt-8">
                         <DoctorSlotAlert />
 

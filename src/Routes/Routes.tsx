@@ -18,9 +18,9 @@ export default function Routes() {
         { path: "/home", element: <Home /> },
         { path: "/home/treatment", element: <Treatment /> },
         { path: "/home/treatment/:category", element: <CategoryPage /> },
-        { path: "/home/treatment/credibility/:category", element: <CredibilityPage/> },
+        { path: "/home/treatment/credibility/:category", element: <CredibilityPage /> },
         { path: "/home/treatment/processing/:category", element: <ProcessingPage /> },
-        { path: "/home/treatment/product/:category", element: <SingleProduct /> }, // Ensure this path is correct
+        { path: "/home/treatment/product/:category", element: <SingleProduct /> },
       ],
     },
     { path: "*", element: <ErrorPage /> },

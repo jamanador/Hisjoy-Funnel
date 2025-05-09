@@ -17,14 +17,10 @@ const ProcessingPage = () => {
             scroller.scrollTo("checking", {
                 smooth: true,
                 duration: 500,
-                offset: -140, // Adjust if needed
+                offset: -140,
             });
         }
     }, [location.hash]);
-
-
-
-
     const tasks = useMemo(() => {
         if (!category) return [];
         return [

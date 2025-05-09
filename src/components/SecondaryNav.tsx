@@ -10,7 +10,7 @@ interface NavbarProps {
 
 const SecondaryNavbar: React.FC<NavbarProps> = ({ isScrollingDown }) => {
     const location = useLocation();
-    // Check if the current path is the home page or the single product page
+    // Checking if the current path is the home page or the single product page
     const isHomePage = location.pathname === '/home';
     const isProductPage = location.pathname.startsWith('/home/treatment/product');
 
@@ -60,7 +60,7 @@ const SecondaryNavbar: React.FC<NavbarProps> = ({ isScrollingDown }) => {
                     </div>
                     <div className="flex items-center gap-4 sm:gap-6">
                         {isHomePage &&
-                            <Link to="/home/treatment#categorySection">
+                            <Link to="/home/treatment#category">
                                 <motion.button
                                     className="flex items-center gap-2 rounded-md bg-[#28A745] px-4 py-2 text-xs font-medium text-white shadow-lg transition-colors hover:bg-[#218838] sm:px-6 sm:py-2 sm:text-sm"
                                     whileHover={{ scale: 1.2 }}

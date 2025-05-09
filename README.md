@@ -3,6 +3,18 @@
 ## Project Overview
 HisJoy is a multi-page e-commerce platform built using **React, Tailwind CSS, and TypeScript**. The project follows a clean, responsive design with smooth animation. It features dynamic routing, an intuitive user experience, and JotForm integration for user details.
 
+## Challenges Faced
+During development, I encountered several challenges that helped sharpen my problem-solving skills:
+
+JotForm Integration Without Backend:
+Integrating JotForm directly with the frontend while ensuring secure and dynamic data capture required custom configuration of hidden fields and manual linking of form parameters.
+
+Dynamic URL Parameters for Auto-Populating Order Page:
+Passing user data such as name, phone, and email via query parameters and mapping them to form fields on the order page was tricky. It involved correctly decoding the URL and conditionally rendering inputs with pre-filled values.
+
+State Preservation Across Routes:
+Maintaining user input state when navigating between multiple pages (e.g., from Treatment to Product page) was challenging. I implemented React Router’s useLocation and useSearchParams hooks combined with conditional rendering to retain and display relevant data.
+
 ## Tech Stack
 - **Frontend**: React, TypeScript, Tailwind CSS
 - **Routing**: React Router

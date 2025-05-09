@@ -2,12 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Category } from '../config/types';
 
-// Mapping of categories to discount codes
 const categoryDiscountCodes = {
     'Best Value': 'HJ140I',
     'Great Value': 'HJ30I30',
     'Most Popular': 'HJ250I',
-    // Add more categories and their corresponding discount codes if needed
 } as const;
 
 export const ProductCard: React.FC<{ product: Category['products'][0] }> = ({ product }) => {
@@ -15,7 +13,6 @@ export const ProductCard: React.FC<{ product: Category['products'][0] }> = ({ pr
     const productName = useParams()
 
     useEffect(() => {
-        // Retrieve form data from local storage
         const savedData = localStorage.getItem('contactFormData');
         // console.log(savedData);
         if (savedData) {

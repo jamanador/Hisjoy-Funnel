@@ -29,13 +29,6 @@ const SecurityInfoCard = () => {
             className="w-24"
           />
         </div>
-        {/* <p className="text-gray-700 text-sm md:text-base">
-          Your personal information is safeguarded with
-          <a href="#" className="text-blue-500 font-medium"> rigorous protection measures</a>.
-          Contact details, orders, and responses are stored securely and treated with the
-          <a href="#" className="text-blue-500 font-medium"> highest level of confidentiality</a>,
-          ensuring your privacy is always protected.
-        </p> */}
         <div className="bg-blue-50 py-2 md:py-4 px-4 md:px-12 flex flex-col md:flex-row justify-center items-center gap-0 md:gap-12 text-center">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-center">

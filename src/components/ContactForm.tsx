@@ -10,6 +10,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onContinue }) => {
     const [email, setEmail] = useState('');
     const [phone, setPhoneNumber] = useState('');
     const [agreeToTerms, setAgreeToTerms] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [errors, setErrors] = useState({
         firstname: false,
         lastname: false,
@@ -17,7 +18,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ onContinue }) => {
         phone: false,
         terms: false,
     });
-    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         const savedData = localStorage.getItem('contactFormData');
@@ -58,7 +58,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ onContinue }) => {
             terms: false,
         });
 
-        // Retrieve discount code from local storage or any other source if needed
         const discountCode = localStorage.getItem('discountCode') || '';
 
         // Form data to be submitted
@@ -87,15 +86,15 @@ const ContactForm: React.FC<ContactFormProps> = ({ onContinue }) => {
             console.log(response)
             if (response.ok) {
                 const responseData = await response.json();
-                console.log(responseData)
+                // console.log(responseData)
                 if (responseData.status === 'OK') {
                     onContinue(); // Call the continue handler
-                    console.log('Form submitted successfully');
+                    // console.log('Form submitted successfully');
                 } else {
-                    console.error('Form submission failed with status:', responseData.status);
+                    // console.error('Form submission failed with status:', responseData.status);
                 }
             } else {
-                console.error('Form submission failed with status:', response.status);
+                // console.error('Form submission failed with status:', response.status);
             }
         } catch (error) {
             console.error('Error submitting form:', error);

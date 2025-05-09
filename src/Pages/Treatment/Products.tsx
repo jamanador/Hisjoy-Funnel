@@ -6,11 +6,11 @@ const ProductsItem = () => {
     const location = useLocation();
 
     useEffect(() => {
-        if (location.hash && location.hash === "#categorySection") {
-            scroller.scrollTo("categorySection", {
+        if (location.hash && location.hash === "#category") {
+            scroller.scrollTo("category", {
                 smooth: true,
                 duration: 500,
-                offset: -140, // Adjust if needed
+                offset: -140,
             });
         }
     }, [location.hash]);
@@ -32,7 +32,7 @@ const ProductsItem = () => {
 
     return (
         <div className="flex flex-col items-center justify-center w-full md:my-6 my-4" >
-            <div id="categorySection">
+            <div id="category">
                 <h1 className="text-black font-bold text-center text-2xl md:text-4xl mt-8 mb-6">
                     Which Treatment <br /> <span className="text-2xl">Would You Prefer?</span>
                 </h1>

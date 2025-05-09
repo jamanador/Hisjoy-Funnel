@@ -1,6 +1,6 @@
 export type Product = {
     name: string;
-    images: string[]; // Supports multiple images
+    images: string[]; 
     description: string;
     trialPackage: {
         tablets: number;
@@ -13,9 +13,9 @@ export type Product = {
         doctorVisit: { price: number; isFree: boolean };
         shipping: { price: number; isFree: boolean };
         total: number;
-        billingInfo?: string; // Optional billing cycle info
+        billingInfo?: string;
         subscription: string;
-        lifetimeDiscount?: string; // Optional lifetime discount
+        lifetimeDiscount?: string;
         guarantee: string;
         productlink:string;
         category:string;

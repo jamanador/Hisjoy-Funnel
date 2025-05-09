@@ -18,7 +18,7 @@ const CredibilityPage: React.FC = () => {
             scroller.scrollTo("greatchoice", {
                 smooth: true,
                 duration: 500,
-                offset: -140, // Adjust if needed
+                offset: -140,
             });
         }
     }, [location.hash]);
@@ -30,7 +30,7 @@ const CredibilityPage: React.FC = () => {
                 </h1>
                 <div className="flex justify-center animate-bounce">
                     <img
-                        src="/images/clinically-proven.ee555b8.png" // Replace with the actual path to your shield image
+                        src="/images/clinically-proven.ee555b8.png"
                         alt="Clinically Proven"
                         className="md:w-4/12 mr-2 w-5/12"
                     />

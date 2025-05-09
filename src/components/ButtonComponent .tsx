@@ -5,28 +5,25 @@ import { scroller } from "react-scroll";
 
 const ButtonComponent = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [active, setActive] = useState<string | null>(null);
 
-
-
-  const location = useLocation();
-
   useEffect(() => {
-    if (location.hash && location.hash === "#categorySection") {
-      scroller.scrollTo("categorySection", {
+    if (location.hash && location.hash === "#category") {
+      scroller.scrollTo("category", {
         smooth: true,
         duration: 700,
-        offset: -140, // Adjust if needed
+        offset: -140, //
       });
     }
   }, [location.hash]);
 
 
   const buttons = [
-    { text: "Get Erections More Easily", bg: "#6fb1c8", route: "/home/treatment#categorySection" },
-    { text: "Get Firmer erections", bg: "#6fb1c8", route: "/home/treatment#categorySection" },
-    { text: "Maintain Erections Longer", bg: "#6fb1c8", route: "/home/treatment#categorySection" },
-    { text: "All of the above", bg: "#21bd00", route: "/home/treatment#categorySection" },
+    { text: "Get Erections More Easily", bg: "#6fb1c8", route: "/home/treatment#category" },
+    { text: "Get Firmer erections", bg: "#6fb1c8", route: "/home/treatment#category" },
+    { text: "Maintain Erections Longer", bg: "#6fb1c8", route: "/home/treatment#category" },
+    { text: "All of the above", bg: "#21bd00", route: "/home/treatment#category" },
   ];
 
   const handleClick = (route: string, index: number) => {
