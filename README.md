@@ -53,25 +53,8 @@ Built a responsive cost comparison chart that adapts based on screen size and us
 
 ---
 
-## 🗂 Folder Structure
-
-/src
-│── components/ # Reusable UI components
-│── pages/ # Home, Treatments, Product, etc.
-│── layout/ # Shared layout elements
-│── assets/ # Static assets like images and icons
-│── styles/ # Tailwind and global styles
-│── routes/ # React Router configuration
-│── App.tsx # Main application root
-│── index.tsx # Entry point
-
-
-
----
-
 ## 🧑‍💻 About the Developer
 
 Crafted with care by [Jaman Ador](https://jamanador.web.app/)  
 🔗 [Connect on LinkedIn](https://www.linkedin.com/in/jamanador/)  
 💼 Frontend Specialist • UI/UX Designer • Funnel Builder
----
