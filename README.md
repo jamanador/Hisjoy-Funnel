@@ -1,70 +1,134 @@
-# HisJoy E-Commerce Funnel
+# 🛍️ HisJoy – E-Commerce Funnel Application
 
-## Project Overview
-HisJoy is a multi-page e-commerce platform built using **React, Tailwind CSS, and TypeScript**. The project follows a clean, responsive design with smooth animation. It features dynamic routing, an intuitive user experience, and JotForm integration for user details.
+![HisJoy Preview](./public/images/cover.png)
 
-## Challenges Faced
-During development, I encountered several challenges that helped sharpen my problem-solving skills:
+*A responsive, animated multi-page funnel crafted to streamline user interaction and drive conversions.*
 
-JotForm Integration Without Backend:
-Integrating JotForm directly with the frontend while ensuring secure and dynamic data capture required custom configuration of hidden fields and manual linking of form parameters.
+**HisJoy** is a conversion-focused e-commerce funnel built with **React**, **TypeScript**, and **Tailwind CSS**. It guides users smoothly from product discovery to checkout while keeping the experience lightweight, fast, and backend-free. The app integrates **JotForm** for dynamic form handling, uses **Framer Motion** for elegant transitions, and supports mobile-first design out of the box.
 
-Dynamic URL Parameters for Auto-Populating Order Page:
-Passing user data such as name, phone, and email via query parameters and mapping them to form fields on the order page was tricky. It involved correctly decoding the URL and conditionally rendering inputs with pre-filled values.
+> This project is tailored for modern product funnels where simplicity, performance, and clarity are key.
 
-State Preservation Across Routes:
-Maintaining user input state when navigating between multiple pages (e.g., from Treatment to Product page) was challenging. I implemented React Router’s useLocation and useSearchParams hooks combined with conditional rendering to retain and display relevant data.
+---
 
-## Tech Stack
-- **Frontend**: React, TypeScript, Tailwind CSS
-- **Routing**: React Router
-- **State Management**: React Hooks
-- **Forms**: JotForm integration
-- **Deployment**: Netlify
+## 🔗 Live Preview
 
-## Features
-- **Dynamic Routing**: Clicking on medication cards navigates directly to the product page.
-- **Pulsating Animation**: Treatment categories pulsate alternately to grab user attention.
-- **Mobile Responsiveness**: The design is fully optimized for all screen sizes.
-<!-- - **Order Flow**: A structured checkout process, leading to order placement. -->
-- **JotForm Integration**: Captures user details dynamically.
-- **Cost Comparison Chart**: Displays pricing information in a structured format.
-- **Sticky Order Button**: Ensures a seamless purchasing experience.
+👉 **[Visit HisJoy Funnel](https://hisjoy.com/erectile-dysfunction-v2-ED/)**
 
-## Folder Structure
-```
+---
+
+## ✨ Features
+
+✔️ **Dynamic Routing** – Seamless page transitions using React Router  
+✔️ **JotForm Integration (No Backend)** – Captures and auto-fills user data through URL parameters  
+✔️ **Cost Comparison Chart** – Responsive and conditionally rendered pricing layout  
+✔️ **Responsive & Animated UI** – Built with Tailwind CSS and Framer Motion  
+✔️ **Sticky CTA Button** – Keeps the order button visible to drive conversions
+
+---
+
+## 🧠 Development Highlights
+
+### 🔐 JotForm Integration Without Backend  
+Integrated JotForm directly into the frontend using hidden fields and URL query parameters to auto-fill user data like name, phone, and email—removing the need for a traditional backend.
+
+### 📦 State Preservation Across Pages  
+Used React Router’s `useLocation` and `useSearchParams` to maintain user data across navigation, ensuring a seamless funnel flow from treatment selection to order confirmation.
+
+### 📊 Conditional Rendering & UX Optimization  
+Built a responsive cost comparison chart that adapts based on screen size and user selection, improving clarity and decision-making on both desktop and mobile.
+
+---
+
+## 🛠 Tech Stack
+
+| Category         | Tools Used                     |
+|------------------|--------------------------------|
+| **Framework**    | React                          |
+| **Language**     | TypeScript                     |
+| **Styling**      | Tailwind CSS                   |
+| **Forms**        | JotForm                        |
+| **Routing**      | React Router                   |
+| **Animation**    | Framer Motion                  |
+| **Hosting**      | Netlify / Vercel               |
+
+---
+
+## 🗂 Folder Structure
+
+# 🛍️ HisJoy – E-Commerce Funnel Application
+
+![HisJoy Preview](./public/images/cover.png)
+
+*A responsive, animated multi-page funnel crafted to streamline user interaction and drive conversions.*
+
+**HisJoy** is a conversion-focused e-commerce funnel built with **React**, **TypeScript**, and **Tailwind CSS**. It guides users smoothly from product discovery to checkout while keeping the experience lightweight, fast, and backend-free. The app integrates **JotForm** for dynamic form handling, uses **Framer Motion** for elegant transitions, and supports mobile-first design out of the box.
+
+> This project is tailored for modern product funnels where simplicity, performance, and clarity are key.
+
+---
+
+## 🔗 Live Preview
+
+👉 **[Visit HisJoy Funnel](https://your-live-link.com/)**
+
+---
+
+## ✨ Features
+
+✔️ **Dynamic Routing** – Seamless page transitions using React Router  
+✔️ **JotForm Integration (No Backend)** – Captures and auto-fills user data through URL parameters  
+✔️ **Cost Comparison Chart** – Responsive and conditionally rendered pricing layout  
+✔️ **Responsive & Animated UI** – Built with Tailwind CSS and Framer Motion  
+✔️ **Sticky CTA Button** – Keeps the order button visible to drive conversions
+
+---
+
+## 🧠 Development Highlights
+
+### 🔐 JotForm Integration Without Backend  
+Integrated JotForm directly into the frontend using hidden fields and URL query parameters to auto-fill user data like name, phone, and email—removing the need for a traditional backend.
+
+### 📦 State Preservation Across Pages  
+Used React Router’s `useLocation` and `useSearchParams` to maintain user data across navigation, ensuring a seamless funnel flow from treatment selection to order confirmation.
+
+### 📊 Conditional Rendering & UX Optimization  
+Built a responsive cost comparison chart that adapts based on screen size and user selection, improving clarity and decision-making on both desktop and mobile.
+
+---
+
+## 🛠 Tech Stack
+
+| Category         | Tools Used                     |
+|------------------|--------------------------------|
+| **Framework**    | React                          |
+| **Language**     | TypeScript                     |
+| **Styling**      | Tailwind CSS                   |
+| **Forms**        | JotForm                        |
+| **Routing**      | React Router                   |
+| **Animation**    | Framer Motion                  |
+| **Hosting**      | Netlify / Vercel               |
+
+---
+
+## 🗂 Folder Structure
+
 /src
-│── components/       # Reusable UI components
-│── pages/            # Main application pages (Home, Treatment, Product, etc.)
-│── layout/           # Application layout components
-│── assets/           # Images and static assets
-│── styles/           # Global Tailwind styles
-│── routes/           # React Router configuration
-│── App.tsx           # Main application entry
-│── index.tsx         # Root entry point
-```
+│── components/ # Reusable UI components
+│── pages/ # Home, Treatments, Product, etc.
+│── layout/ # Shared layout elements
+│── assets/ # Static assets like images and icons
+│── styles/ # Tailwind and global styles
+│── routes/ # React Router configuration
+│── App.tsx # Main application root
+│── index.tsx # Entry point
 
-## Installation
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-repo/hisjoy.git
-   cd hisjoy
-   ```
-2. Install dependencies:
-   ```sh
-   npm install  # or yarn install
-   ```
-3. Start the development server:
-   ```sh
-   npm run dev  # or yarn dev
-   ```
 
-## Deployment
-1. Build the project:
-   ```sh
-   npm run build  # or yarn build
-   ```
-2. Deploy using Vercel, Netlify, or any preferred hosting service.
 
-## Contact
-For any inquiries, contact **[hellojamanador@gmail.com]**.
+---
+
+## 🧑‍💻 About the Developer
+
+Crafted with care by [Jaman Ador](https://jamanador.web.app/)  
+🔗 [Connect on LinkedIn](https://www.linkedin.com/in/jamanador/)  
+💼 Frontend Specialist • UI/UX Designer • Funnel Builder
+---
