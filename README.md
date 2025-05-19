@@ -16,7 +16,7 @@
 
 ---
 
-## ✨ Features
+## Features
 
 ✔️ **Dynamic Routing** – Seamless page transitions using React Router  
 ✔️ **JotForm Integration (No Backend)** – Captures and auto-fills user data through URL parameters  
@@ -26,7 +26,7 @@
 
 ---
 
-## 🧠 Development Highlights
+## Development Highlights
 
 ### 🔐 JotForm Integration Without Backend  
 Integrated JotForm directly into the frontend using hidden fields and URL query parameters to auto-fill user data like name, phone, and email—removing the need for a traditional backend.
@@ -57,4 +57,4 @@ Built a responsive cost comparison chart that adapts based on screen size and us
 
 Crafted with care by [Jaman Ador](https://jamanador.web.app/)  
 🔗 [Connect on LinkedIn](https://www.linkedin.com/in/jamanador/)  
-💼 Frontend Specialist • UI/UX Designer • Funnel Builder
+💼 Frontend Specialist • UI Design • Funnel Builder
