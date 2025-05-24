@@ -11,6 +11,7 @@ import SecurityInfoCard from "../../components/SecurityInfoCard";
 import SuccessCard from "../../components/SuccessCard";
 import WhyChooseUs from "../../components/WhyChooseUs ";
 import categories from "../../config";
+import PreviousCustomerOffer from "./PreviousCustomerOffer";
 
 const SingleProduct = () => {
     const { category } = useParams<{ category: string }>();
@@ -40,7 +41,6 @@ const SingleProduct = () => {
             </div>
         );
     }
-
     return (
         <div className="flex flex-col items-center">
             <MarqueeBanner text="✨- Fantastic News! You Are Eligible -🎈 " />
@@ -49,7 +49,6 @@ const SingleProduct = () => {
                     Get Up to 2 Months FREE
                 </h1>
                 <div>
-
                     {/* Render each product in the selected category */}
                     <div className="mt-10 mb-5" id="productSection">
                         <h2 className=" text-2xl md:text-3xl font-bold mb-8 text-center md:mt-12 mt-10">Choose Your Package
@@ -63,14 +62,12 @@ const SingleProduct = () => {
                     <EstimatedDelivery />
                     <div className="max-w-xl mx-auto md:mt-12 mt-8">
                         <DoctorSlotAlert />
-
                         <div className="flex items-center justify-center mx-2">
                             <div className="flex items-center justify-center bg-brand-secondary text-white px-4 py-3 rounded-lg md:w-9/12 text-center w-full md:mt-8 my-3">
                                 <span className="text-[12px] md:text-lg font-bold">✓</span>
                                 <span className="text-[13px] md:text-sm font-bold text-center">No video or phone call required!</span>
                             </div>
                         </div>
-
                         <OffersBadge />
                         <GuaranteeCard />
                         <FastActingCard />
@@ -78,6 +75,7 @@ const SingleProduct = () => {
                         <WhyChooseUs />
                         <Reviews />
                         <SecurityInfoCard />
+                        <PreviousCustomerOffer />
                     </div>
                 </div>
             </div>
