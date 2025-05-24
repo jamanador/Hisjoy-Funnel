@@ -24,7 +24,7 @@ const PreviousCustomerOffer = () => {
     // Show the card after 1 second
     const showTimer = setTimeout(() => {
       setIsVisible(true);
-    }, 1000);
+    }, 9000);
     return () => clearTimeout(showTimer);
   }, []);
 
@@ -34,7 +34,7 @@ const PreviousCustomerOffer = () => {
     // Change card every 3 seconds
     const cycleTimer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % offerCards.length);
-    }, 3000);
+    }, 9000);
 
     return () => clearInterval(cycleTimer);
   }, [isVisible]);
@@ -56,7 +56,7 @@ const PreviousCustomerOffer = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className="bg-white shadow-lg border border-gray-200 p-4 rounded-2xl"
+              className="bg-white shadow-sm border border-gray-200 p-4 rounded-2xl"
             >
               <h3 className="font-bold text-lg mb-2 text-brand-primary">
                 {offerCards[currentIndex].title}
@@ -64,6 +64,7 @@ const PreviousCustomerOffer = () => {
               <p className="text-sm text-gray-700">
                 {offerCards[currentIndex].message}
               </p>
+              <button className="py-1 font-medium text-sm px-6 bg-brand-secondary text-white mt-4">Get Your Deal</button>
             </motion.div>
           </AnimatePresence>
         </motion.div>
