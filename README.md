@@ -16,6 +16,21 @@
 
 ---
 
+## 🔍 Screenshots
+
+| Page | Preview |
+|------|---------|
+| **Homepage** | ![Homepage](./public/images/homepage.png) |
+| **Category Page** | ![Category Page](./public/images/categorypage.png) |
+| **Contact Form Page** | ![Contact Form Page](./public/images/contactformpage.png) |
+| **Doctor Checking Page** | ![Doctor Checking Page](./public/images/checkingdoctorpage.png) |
+| **Single Product Page** | ![Single Product Page](./public/images/singleproductpage.png) |
+| **Checkout Page** | ![Checkout Page](./public/images/checkoutpage.png) |
+
+> 📸 All views are mobile-friendly and optimized for conversion performance.
+
+---
+
 ## Features
 
 ✔️ **Dynamic Routing** – Seamless page transitions using React Router  
