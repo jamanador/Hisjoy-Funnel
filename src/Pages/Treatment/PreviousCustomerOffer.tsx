@@ -21,7 +21,6 @@ const PreviousCustomerOffer = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    // Show the card after 1 second
     const showTimer = setTimeout(() => {
       setIsVisible(true);
     }, 9000);
@@ -31,7 +30,6 @@ const PreviousCustomerOffer = () => {
   useEffect(() => {
     if (!isVisible) return;
 
-    // Change card every 3 seconds
     const cycleTimer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % offerCards.length);
     }, 9000);
@@ -56,15 +54,26 @@ const PreviousCustomerOffer = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5 }}
-              className="bg-white shadow-sm border border-gray-200 p-4 rounded-2xl"
+              className="relative bg-white shadow-sm border border-gray-200 p-4 rounded-2xl"
             >
+              {/* Close Button */}
+              <button
+                onClick={() => setIsVisible(false)}
+                className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-xl font-bold focus:outline-none"
+                aria-label="Close"
+              >
+                &times;
+              </button>
+
               <h3 className="font-bold text-lg mb-2 text-brand-primary">
                 {offerCards[currentIndex].title}
               </h3>
               <p className="text-sm text-gray-700">
                 {offerCards[currentIndex].message}
               </p>
-              <button className="py-1 font-medium text-sm px-6 bg-brand-secondary text-white mt-4">Get Your Deal</button>
+              <button className="py-1 font-medium text-sm px-6 bg-brand-secondary text-white mt-4">
+                Get Your Deal
+              </button>
             </motion.div>
           </AnimatePresence>
         </motion.div>
